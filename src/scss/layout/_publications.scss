@@ -1,0 +1,26 @@
+.publications {
+	padding-top: 75px;
+	padding-bottom: 70px;
+
+	@include respond-to(xl) {
+	padding-top: 135px;
+	padding-bottom: 165px;
+	}
+
+	// .publications__list
+	&__list {
+		margin-top: 40px;
+
+		ol,
+		ul {
+			column-width: 360px;
+			column-count: 2;
+			column-gap: 35px;
+
+			li {
+				break-inside: avoid-column;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

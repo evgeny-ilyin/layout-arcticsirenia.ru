@@ -1,0 +1,62 @@
+.quote {
+	display: flex;
+	// position: relative;
+	width: 100%;
+	max-width: 320px;
+
+	@include respond-to(xl) {
+		width: 60%;
+		max-width: none;
+	}
+
+	@include respond-to(xxl) {
+		width: 50%;
+	}
+
+	// .quote__wrapper
+	&__wrapper {
+		width: 35px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 5px 8px 5px 0;
+		margin: 0 8px 0 -43px;
+	}
+
+	// .quote_blue
+	&_blue {
+		color: $brand-color-primary;
+	}
+
+	// .quote_w100
+	&_w100 {
+		width: 100%;
+	}
+
+	// .quote__vertical
+	&__vertical {
+		// position: absolute;
+		// top: calc(100% - 5px);
+		// left: 0;
+		// margin-left: -33px;
+		// transform-origin: 0 0;
+
+		font-size: rem(12);
+		line-height: 1.2;
+		transform: rotate(-90deg);
+
+		@include respond-to(xl) {
+			white-space: nowrap;
+			padding-top: 10px;
+		}
+	}
+	// .quote__text
+	&__text {
+		font-size: rem(16);
+		line-height: 1.2;
+
+		@include respond-to(xl) {
+			font-size: rem(20);
+		}
+	}
+}

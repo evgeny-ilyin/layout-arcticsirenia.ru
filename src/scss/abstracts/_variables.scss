@@ -1,0 +1,112 @@
+// top, menu, bg, бордер на сноске, заголовки
+// #020B49
+// date, a, icon modal
+// #FF5252
+// quotes, primary, бордеры
+// #2862DB
+// icons +/-, modal quote
+// #20C9CB
+// text
+// #333333
+// gray light
+// #F0F7FA
+// gray dark (мелкий текст на выноске)
+// #404040
+// header fixed bgr
+// #F0F7FA
+// area bgr
+// #F2F5F5
+// circle
+// #1F17FF
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Headers font family
+/// @type List
+$ff-header: 'Roboto', sans-serif !default;
+
+/// Regular font family
+/// @type List
+$ff-text: 'Roboto', sans-serif !default;
+
+/// Main brand color
+/// @type Color
+$brand-color-primary: #2862db !default;
+$brand-color-secondary: #020b49 !default;
+
+/// Light grey
+/// @type Color
+$grey-light: #f0f7fa;
+$grey-light2: #f2f5f5;
+
+/// Medium grey
+/// @type Color
+$grey-mid: #404040;
+
+/// Dark grey
+/// @type Color
+$grey-dark: #333333;
+
+/// Simple colors (helpers)
+/// @type Color
+$white: #fff;
+$black: #000;
+$grey: $grey-mid;
+$red: #ff5252;
+$cyan: #20c9cb;
+$blue: #1f17ff;
+
+$hover-red: darken($red, 10%);
+
+/// Text color
+/// @type Color
+$header-color: $brand-color-secondary !default;
+$text-color: $grey-dark !default;
+
+$href-color: $brand-color-primary !default;
+$href-color-hover: $hover-red !default;
+
+/// Form colors
+/// @type Color
+$placeholder-color: $grey-dark;
+$input-color: $text-color;
+
+/// Buttons
+$btn-grey: $grey-dark;
+
+/// Transitions
+$transition-default: 0.2s ease-in-out;
+
+/// Container's maximum width + paddings
+/// @type Length
+$min-width: 320px !default;
+$max-width: 1440px !default;
+
+$min-padding: 8px !default;
+$max-padding: 132px !default;
+
+$lg-padding: 85px !default;
+$xxl-padding: 15px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+	"xs": 320px,
+	"sm": 425px,
+	"xm": 577px,
+	"md": 768px,
+	"lg": 1024px,
+	"lgx": 1200px,
+	"xl": 1440px,
+	"xxl": 1900px,
+) !default;
+
+/// svg base64
+$bgr-dna: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA0NjcgNDkzIj48cGF0aCBzdHJva2U9IiMyMEM5Q0IiIHN0cm9rZS1kYXNoYXJyYXk9IjIgMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjIyLjkyNiIgZD0iTTQ2My4zNjMgNDkwLjIyOGMwLTk4LjU3OC0xMTUuMTU1LTE3MS41MjYtMjMwLTI0NS4wMTEtMTE0LjgyMi03My40NjMtMjMwLTE0Ni40MzQtMjMwLTI0NC45OSIvPjxwYXRoIHN0cm9rZT0iIzIwQzlDQiIgc3Ryb2tlLWRhc2hhcnJheT0iMiAyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTI2IiBkPSJNMy4zNjMgNDkwLjIyOGMwLTk4LjU3OCAxMTUuMTc4LTE3MS41MjYgMjMwLTI0NS4wMTEgMTE0Ljg0NS03My40NjMgMjMwLTE0Ni40MzQgMjMwLTI0NC45OSIvPjxwYXRoIGZpbGw9IiMyMEM5Q0IiIGQ9Ik00NjAuNjk3IDQ5MC4yMjhhMi42NjYgMi42NjYgMCAxIDAgNS4zMzIgMCAyLjY2NiAyLjY2NiAwIDAgMC01LjMzMiAwWm0tMjI2Ljk2OS41aDIyOS42MzZ2LTFIMjMzLjcyOHYxWk02LjAzIDQ5MC4yMjhhMi42NjcgMi42NjcgMCAxIDAtNS4zMzMgMCAyLjY2NyAyLjY2NyAwIDAgMCA1LjMzMyAwWm0yMjcuNjk4LS41SDMuMzY0djFoMjMwLjM2NHYtMVpNMTQyLjg5NCAxODMuOTc4YTIuNjY3IDIuNjY3IDAgMSAwLTUuMzMzIDAgMi42NjcgMi42NjcgMCAwIDAgNS4zMzMgMFptOTAuODM0LS41aC05My41djFoOTMuNXYtMVpNNDQ2LjA2MSA0MjguOTc4YTIuNjY2IDIuNjY2IDAgMSAwIDUuMzMyIDAgMi42NjYgMi42NjYgMCAwIDAtNS4zMzIgMFptLTIxMi4zMzMuNWgyMTV2LTFoLTIxNXYxWiIvPjxwYXRoIGZpbGw9IiMyMEM5Q0IiIGQ9Ik0yMS4xNDQgNDI4Ljk3OGEyLjY2NyAyLjY2NyAwIDEgMC01LjMzMyAwIDIuNjY3IDIuNjY3IDAgMCAwIDUuMzMzIDBabTIxMi41ODQtLjVIMTguNDc4djFoMjE1LjI1di0xWk02Ny44OTMgMTIyLjcyOGEyLjY2NyAyLjY2NyAwIDEgMC01LjMzMyAwIDIuNjY3IDIuNjY3IDAgMCAwIDUuMzMzIDBabTE2NS44MzQtLjVoLTE2OC41djFoMTY4LjV2LTFaTTM5OS44MTEgMzY3LjcyOGEyLjY2NiAyLjY2NiAwIDEgMCA1LjMzMiAwIDIuNjY2IDIuNjY2IDAgMCAwLTUuMzMyIDBabS0xNjYuMDgzLjVoMTY4Ljc1di0xaC0xNjguNzV2MVoiLz48cGF0aCBmaWxsPSIjMjBDOUNCIiBkPSJNNjcuODk0IDM2Ny43MjhhMi42NjcgMi42NjcgMCAxIDAtNS4zMzMgMCAyLjY2NyAyLjY2NyAwIDAgMCA1LjMzMyAwWm0xNjUuODM0LS41aC0xNjguNXYxaDE2OC41di0xWk0yMS4xNDMgNjEuNDc4YTIuNjY3IDIuNjY3IDAgMSAwLTUuMzMzIDAgMi42NjcgMi42NjcgMCAwIDAgNS4zMzMgMFptMjEyLjU4NC0uNUgxOC40Nzd2MWgyMTUuMjV2LTFaTTMyNC4wNjEgMTgzLjk3OGEyLjY2NiAyLjY2NiAwIDEgMCA1LjMzMiAwIDIuNjY2IDIuNjY2IDAgMCAwLTUuMzMyIDBabS05MC4zMzMuNWg5M3YtMWgtOTN2MVpNMzk5LjgxIDEyMi43MjhhMi42NjYgMi42NjYgMCAxIDAgNS4zMzIgMCAyLjY2NiAyLjY2NiAwIDAgMC01LjMzMiAwWm0tMTY2LjA4My41aDE2OC43NXYtMWgtMTY4Ljc1djFaIi8+PHBhdGggZmlsbD0iIzIwQzlDQiIgZD0iTTQ0Ni4wNiA2MS40NzhhMi42NjcgMi42NjcgMCAxIDAgNS4zMzQgMCAyLjY2NyAyLjY2NyAwIDAgMC01LjMzNCAwWm0tMjEyLjMzMy41aDIxNXYtMWgtMjE1djFaTTMyNC4wNjEgMzA2LjQ3OGEyLjY2NiAyLjY2NiAwIDEgMCA1LjMzMiAwIDIuNjY2IDIuNjY2IDAgMCAwLTUuMzMyIDBabS05MC4zMzMuNWg5M3YtMWgtOTN2MVoiLz48cGF0aCBmaWxsPSIjMjBDOUNCIiBkPSJNMTQyLjg5NCAzMDYuNDc4YTIuNjY3IDIuNjY3IDAgMSAwLTUuMzMzIDAgMi42NjcgMi42NjcgMCAwIDAgNS4zMzMgMFptOTAuODM0LS41aC05My41djFoOTMuNXYtMVoiLz48L3N2Zz4=";
+
+$brace-blue: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNDQwIDIzMiI+PHBhdGggZmlsbD0iIzAyMEI0OSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMCAuNzhoMTQ0MHY0OC43MzhjMCA0Ny4wNzctMzguNDkgODUuNDc3LTg1LjQ4IDg1LjQ3N0g4NjIuMDYyYy02My4zMjQgMC0xMTcuMzI0IDQwLjA2Mi0xMzggOTYuMTg1aC04LjEyNGMtMjAuNjc2LTU2LjEyMy03NC42NzYtOTYuMTg1LTEzNy45MDctOTYuMTg1SDg1LjQ3N0MzOC40OTIgMTM0Ljk5NSAwIDk2LjU5NSAwIDQ5LjUxOFYuNzhaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=";
+
+$brace-narrow: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA0NjQgNjAiPjxwYXRoIHN0cm9rZT0iIzAyMEI0OSIgZD0iTTQ2MyAuNjJjMCAxNS4xMDQtMTIuMzUgMjcuNDI0LTI3LjQyNCAyNy40MjRIMjc3LjU3OGMtMjAuMzE2IDAtMzcuNjQxIDEyLjg1My00NC4yNzUgMzAuODZoLTIuNjA2Yy02LjYzNC0xOC4wMDctMjMuOTU5LTMwLjg2LTQ0LjI0NS0zMC44NkgyOC40MjRDMTMuMzUgMjguMDQ0IDEgMTUuNzI0IDEgLjYyIi8+PC9zdmc+";

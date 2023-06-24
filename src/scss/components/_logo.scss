@@ -1,0 +1,65 @@
+.logo {
+	// display: flex;
+	flex-basis: 50%;
+	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 48px;
+	padding-right: 50px;
+
+	// .logo_fixed
+	&_fixed {
+		padding-top: 25px;
+	}
+
+	// .logo__link
+	&__link {
+		margin-left: -39px;
+		display: inline-block;
+
+		@include respond-to(xl) {
+			margin-left: -45px;
+		}
+	}
+
+	// .logo__svg
+	&__svg {
+		width: 198px;
+		height: 99px;
+		fill: $text-color;
+
+		@include respond-to(xl) {
+			width: 228px;
+			height: 114px;
+		}
+
+		@include when-inside(".footer") {
+			fill: $white;
+		}
+	}
+
+	// .logo__slogan
+	&__slogan {
+		max-width: 333px;
+		color: $white;
+		font-size: 0.75rem;
+		margin-top: 21px;
+		
+		@include respond-to(xl) {
+			margin-top: 56px;
+		}
+	}
+
+	@include when-inside(".logo_fixed") {
+		// .logo__svg
+		&__svg {
+			width: 113px;
+			height: 30px;
+		}
+		// .logo__link
+		&__link {
+			height: 30px;
+			transition: opacity $transition-default;
+		}
+	}
+}

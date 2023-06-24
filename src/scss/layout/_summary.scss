@@ -1,0 +1,14 @@
+.summary {
+	position: relative;
+	background: $brand-color-secondary url(@img/bgr_about.png) center 850px no-repeat;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -230px;
+		width: 100%;
+		height: 232px;
+		background: url($brace-blue) center top no-repeat;
+	}
+}

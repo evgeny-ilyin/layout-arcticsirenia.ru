@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// 2. Vendors
+@import "vendors/normalize";
+@import "vendors/reset";
+// @import "vendors/swiper";
+// @import "~@fancyapps/ui/dist/fancybox";
+// @import "~lc-select/themes/light";
+// @import "~nouislider/dist/nouislider";
+
+// 3. Base stuff
+@import "base/base";
+@import "base/fonts";
+@import "base/grid";
+@import "base/typography";
+@import "base/helpers";
+@import "base/common-icons";
+
+// 4. Layout-related sections
+@import "layout/header";
+@import "layout/summary";
+@import "layout/section_goal";
+@import "layout/section_about";
+@import "layout/team";
+@import "layout/news";
+@import "layout/publications";
+@import "layout/footer";
+
+// 5. Components
+@import "components/logo";
+@import "components/nav";
+@import "components/social";
+@import "components/quote";
+@import "components/button";
+@import "components/form";
+@import "components/checkbox";
+@import "components/svg-sprite";
+
+// 6. Page-specific styles
+@import "pages/home";
+
+// 7. Themes
+@import "themes/default";

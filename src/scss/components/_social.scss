@@ -1,0 +1,124 @@
+.social {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-basis: 25%;
+	padding: 36px 20px 31px;
+	border-left: 1px solid $brand-color-primary;
+
+	@include when-inside(".footer") {
+		padding-bottom: 87px;
+
+		@include respond-to(xl) {
+			padding-bottom: 128px;
+		}
+	}
+
+	// .social_fixed
+	&_fixed {
+		padding-top: 24px;
+		padding-bottom: 21px;
+
+		@include respond-to(xl) {
+			padding-top: 22px;
+			padding-bottom: 19px;
+		}
+	}
+
+	// .social__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+	}
+	// .social__item
+	&__item {
+		padding: 0;
+		margin: 0;
+	}
+	// .social__link
+	&__link {
+		display: block;
+		width: 22px;
+		height: 22px;
+
+		@include respond-to(xl) {
+			width: 25px;
+			height: 25px;
+		}
+
+		@include on-event {
+			svg {
+				fill: $hover-red;
+			}
+		}
+
+		svg {
+			width: 22px;
+			height: 22px;
+			fill: $red;
+			transition: all $transition-default;
+
+			@include respond-to(xl) {
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
+}
+
+.lang {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 58px;
+	height: 28px;
+	border: 1px solid $brand-color-primary;
+	border-radius: 16px;
+	margin-left: -3px;
+	transition: opacity $transition-default;
+
+	@include respond-to(xl) {
+		width: 67px;
+		height: 33px;
+	}
+
+	// .lang_en
+	&_en {
+		padding-left: 3px;
+		align-items: flex-start;
+	}
+	// .lang_ru
+	&_ru {
+		padding-right: 3px;
+		align-items: flex-end;
+	}
+	// .lang__link
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 1px;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background: $red;
+		color: $white;
+		text-decoration: none;
+		line-height: 1;
+		font-size: rem(11);
+		font-weight: 500;
+
+		@include on-event {
+			background: $hover-red;
+			color: $white;
+		}
+
+		@include respond-to(xl) {
+			padding-top: 0;
+			width: 25px;
+			height: 25px;
+			font-size: rem(13);
+		}
+	}
+}
