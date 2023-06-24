@@ -1,5 +1,10 @@
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+
+;// CONCATENATED MODULE: ./src/js/modules/functions.js
 /* Проверка поддержки webp браузером */
-export function isWebp() {
+function isWebp() {
 	function testWebP(callback) {
 		let webP = new Image();
 		webP.onload = webP.onerror = function () {
@@ -16,7 +21,7 @@ export function isWebp() {
 	});
 }
 
-export function navClick() {
+function navClick() {
 	const navLinks = document.querySelectorAll(".nav__link"),
 		menuCheckbox = document.getElementById("menu-toggle"),
 		header = document.querySelector("header");
@@ -49,7 +54,7 @@ export function navClick() {
 // 	handleScroll();
 // }
 
-export function stickyHeader() {
+function stickyHeader() {
 	const body = document.body,
 		menuCheckbox = document.getElementById("menu-toggle"),
 		header = document.querySelector("header"),
@@ -77,7 +82,7 @@ export function stickyHeader() {
 	handleScroll();
 }
 
-export function menuToggle() {
+function menuToggle() {
 	const menuCheckbox = document.getElementById("menu-toggle"),
 		header = document.querySelector("header"),
 		headerFixed = document.querySelector(".header_fixed"),
@@ -105,7 +110,7 @@ export function menuToggle() {
 	menuCheckbox.addEventListener("change", menuToggle);
 }
 
-export function marginAfterAbout() {
+function marginAfterAbout() {
 	const stepsH = document.querySelector(".info_block7").offsetHeight,
 		sectionNext = document.querySelector(".summary + div");
 	sectionNext.style.marginTop = `${stepsH - 165 - 74}px`;
@@ -113,7 +118,7 @@ export function marginAfterAbout() {
 	window.addEventListener("resize", marginAfterAbout);
 }
 
-export function accordionPerson() {
+function accordionPerson() {
 	const buttons = document.querySelectorAll(".accordion-person");
 	buttons.forEach((button) => {
 		button.addEventListener("click", () => {
@@ -129,3 +134,21 @@ export function accordionPerson() {
 		});
 	});
 }
+
+;// CONCATENATED MODULE: ./src/js/app.js
+
+isWebp();
+navClick();
+stickyHeader();
+menuToggle();
+marginAfterAbout();
+accordionPerson();
+
+// import "./modules/cookies.js";
+// import "./modules/swiper.js";
+// import "./modules/fancybox.js";
+// import "./modules/lc_select.js";
+// import "./modules/nouislider.js";
+
+/******/ })()
+;
