@@ -1881,6 +1881,10 @@ input[type=checkbox]:disabled {
   .logo__link {
     margin-left: -39px
   }
+  .logo__svg {
+    width: 198px;
+    height: 99px
+  }
   .quote__wrapper {
     margin: 0 8px 0 -43px
   }
@@ -2067,8 +2071,8 @@ input[type=checkbox]:disabled {
     margin-left: -45px
   }
   .logo__svg {
-    width: 198px;
-    height: 99px
+    width: 228px;
+    height: 114px
   }
   .logo__slogan {
     margin-top: 56px
