@@ -1312,7 +1312,7 @@ strong {
 }
 .logo__svg {
   width: 100%;
-  max-width: 228px;
+  max-width: 198px;
   min-width: 122px;
   height: 114px;
   fill: #333
@@ -2072,6 +2072,7 @@ input[type=checkbox]:disabled {
   }
   .logo__svg {
     width: 228px;
+    max-width: none;
     height: 114px
   }
   .logo__slogan {
