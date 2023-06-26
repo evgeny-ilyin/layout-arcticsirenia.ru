@@ -1028,7 +1028,7 @@ strong {
   z-index: 1
 }
 .person {
-  margin-top: 10px
+  margin-top: 30px
 }
 .person:nth-child(2) {
   margin-top: 30px
@@ -1072,7 +1072,8 @@ strong {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  padding-bottom: 25px
 }
 .person__wrapper {
   z-index: 2;
@@ -1681,7 +1682,7 @@ strong {
   color: #2862db
 }
 .quote_w100 {
-  width: 100%
+  width: 100%!important
 }
 .quote__vertical {
   font-size: .5625rem;
@@ -2012,7 +2013,8 @@ input[type=checkbox]:disabled {
     font-size: 2.8125rem
   }
   .area__quote {
-    display: block
+    display: block;
+    padding: 78px 65px 54px 60px
   }
   .circle {
     width: 25px;
@@ -2071,7 +2073,8 @@ input[type=checkbox]:disabled {
     padding-left: 75px
   }
   .person__col_right {
-    padding-left: 32px
+    padding-left: 32px;
+    padding-bottom: 0
   }
   .person__name {
     margin-top: 10px
@@ -2403,7 +2406,7 @@ input[type=checkbox]:disabled {
     padding: 28px 116px 0
   }
   .area__quote {
-    padding: 55px 116px 46px
+    padding: 55px 100px 46px 116px
   }
   .steps {
     margin-top: 48px
