@@ -1591,6 +1591,7 @@ strong {
   transition: all .2s ease-in-out
 }
 .lang {
+  opacity: 0!important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
