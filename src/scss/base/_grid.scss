@@ -9,16 +9,21 @@
 	max-width: $max-width;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: $lg-padding;
-	padding-right: $lg-padding; // info_block7 спозиционирован абсолютно, менять при адаптиве
+	padding-left: $min-padding;
+	padding-right: $min-padding; // info_block7 спозиционирован абсолютно, менять при адаптиве
 	// padding-top: 50px;
 	// padding-bottom: 40px;
 	// margin-left: -$min-padding;
 	// margin-right: -$min-padding;
 
+	@include respond-to(lg) {
+		padding-left: $lg-padding;
+		padding-right: $lg-padding;
+	}
+
 	@include respond-to(xl) {
 		padding-left: $max-padding;
-		padding-right: $max-padding; // info_block7 спозиционирован абсолютно, менять при адаптиве
+		padding-right: $max-padding;
 	}
 
 	&_wide {

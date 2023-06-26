@@ -35,11 +35,15 @@ body {
 
 %h2-heading {
 	// sub
-	font-size: rem(43);
+	font-size: rem(25);
 	font-weight: 700;
 	line-height: 1;
 	color: $header-color;
 	text-transform: uppercase;
+
+	@include respond-to(md) {
+		font-size: rem(43);
+	}
 
 	@include respond-to(xl) {
 		font-size: rem(50);
@@ -48,10 +52,14 @@ body {
 
 %h3-heading {
 	// names
-	font-size: rem(30);
+	font-size: rem(18);
 	font-weight: 500;
 	line-height: 0.95;
 	color: $header-color;
+
+	@include respond-to(md) {
+		font-size: rem(30);
+	}
 
 	@include respond-to(xl) {
 		font-size: rem(43);
@@ -60,10 +68,18 @@ body {
 
 %h4-heading {
 	// timeline + person
-	font-size: rem(25);
+	font-size: rem(18);
 	font-weight: 700;
 	line-height: 1.1;
 	// color: $text-color;
+
+	@include respond-to(md) {
+		font-size: rem(20);
+	}
+
+	@include respond-to(lg) {
+		font-size: rem(25);
+	}
 }
 
 %h5-heading {
@@ -224,7 +240,11 @@ strong {
 }
 
 .small {
-	font-size: rem(14) !important;
+	font-size: rem(12) !important;
+
+	@include respond-to(md) {
+		font-size: rem(14) !important;
+	}
 }
 
 .fz18 {

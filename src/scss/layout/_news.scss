@@ -1,6 +1,33 @@
 .news {
-	padding: 222px 0 84px;
+
+	.content {
+		display: none;
+	}
+	
+	position: relative;
+	padding: 97px 0 84px;
 	background: $brand-color-secondary;
+
+	@include respond-to(md) {
+		padding-top: 150px;
+	}
+
+	@include respond-to(xl) {
+		padding-top: 222px;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		max-width: 1440px;
+		height: 183px;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background: url($brace-wide-white) center 0 / 100% no-repeat;
+	}
 
 	@include respond-to(xl) {
 		padding-bottom: 144px;
@@ -8,10 +35,13 @@
 
 	// .news__list
 	&__list {
-		margin-top: 40px;
 		column-width: 360px;
 		column-count: 2;
 		column-gap: 17px;
+
+		@include respond-to(md) {
+			margin-top: 40px;
+		}
 	}
 	// .news__item
 	&__item {
@@ -40,19 +70,27 @@
 
 	// .news__date
 	&__date {
-		font-size: rem(18);
+		font-size: rem(12);
 		font-weight: 300;
 		color: $red;
 		margin-right: 15px;
+
+		@include respond-to(lg) {
+			font-size: rem(18);
+		}
 	}
 
 	// .news__link
 	&__link {
-		font-size: rem(30);
+		font-size: rem(18);
 		line-height: 0.9;
 		font-weight: 700;
 		color: $cyan;
 		text-decoration: none;
+
+		@include respond-to(lg) {
+			font-size: rem(30);
+		}
 
 		@include respond-to(xl) {
 			font-size: rem(43);

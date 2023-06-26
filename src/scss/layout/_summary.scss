@@ -1,7 +1,10 @@
 .summary {
 	position: relative;
-	background: $brand-color-secondary url(@img/bgr_about.png) center 850px no-repeat;
+	background: $brand-color-secondary url(@img/bgr_about.png) 35% 280px no-repeat;
 
+	@include respond-to(md) {
+		background-position: center 850px;
+	}
 	&::after {
 		content: "";
 		display: block;

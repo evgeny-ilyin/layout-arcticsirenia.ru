@@ -6,7 +6,8 @@
 	display: flex;
 	background: $white;
 	transition: top 0.5s ease-in-out;
-
+	min-width: 320px;
+	
 	// .header_scroll
 	&_scroll {
 		position: fixed;
@@ -28,6 +29,7 @@
 		top: -74px;
 		height: 74px;
 		width: 100%;
+		min-width: 320px;
 		border-bottom: 1px solid $brand-color-primary;
 	}
 

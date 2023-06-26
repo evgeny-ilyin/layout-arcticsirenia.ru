@@ -1,5 +1,31 @@
 .team {
-	margin-bottom: -115px;
+	// margin-bottom: -46px;
+	margin-bottom: -14.2vw;
+
+	@include respond-to(sm) {
+		margin-bottom: -11.4vw;
+	}
+
+	@include respond-to(xm) {
+		margin-bottom: -10.3vw;
+	}
+
+	@include respond-to(md) {
+		margin-bottom: -9.6vw;
+	}
+
+	@include respond-to(lg) {
+		margin-bottom: -8.8vw;
+	}
+
+	@include respond-to(lgx) {
+		margin-bottom: -8.4vw;
+	}
+
+	@include respond-to(xl) {
+		// margin-bottom: -8vw;
+		margin-bottom: -115px;
+	}
 
 	// .team__wrapper
 	&__wrapper {
@@ -11,53 +37,85 @@
 .person {
 	margin-top: 30px;
 
-	&:nth-child(2) {
+	@include respond-to(md) {
+		margin-top: 30px;
+	}
+
+	@include respond-to(xl) {
 		margin-top: 50px;
+	}
+
+	&:nth-child(2) {
+		margin-top: 30px;
+
+		@include respond-to(md) {
+			margin-top: 50px;
+		}
 
 		@include respond-to(xl) {
 			margin-top: 110px;
 		}
 	}
 
+	&:last-child {
+		&::after {
+			background: none;
+		}
+	}
+
 	&::after {
-		z-index: -1;
 		content: "";
 		display: block;
 		position: absolute;
 		width: 100%;
 		height: 183px;
 		left: 0;
-		margin-top: -115px;
-		// brace-wide
-		background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNDQwIDE4MyI+PHBhdGggc3Ryb2tlPSIjMDIwQjQ5IiBkPSJNMTQ0MCAuMzQ0YzAgNDcuMDc3LTM4LjQ5IDg1LjQ3Ny04NS40OCA4NS40NzdIODYyLjA2MmMtNjMuMzI0IDAtMTE3LjMyMyA0MC4wNjItMTM4IDk2LjE4NWgtOC4xMjRjLTIwLjY3Ny01Ni4xMjMtNzQuNjc2LTk2LjE4NS0xMzcuOTA3LTk2LjE4NUg4NS40NzdDMzguNDkyIDg1LjgyMSAwIDQ3LjQyMSAwIC4zNDQiLz48L3N2Zz4=")
-			center top / contain no-repeat;
+		margin-top: -117px;
+		background: url($brace-wide-blue) center 50% / 100% no-repeat;
 
-		@include respond-to(lg) {
-			position: absolute;
-			width: 100%;
-			height: 130px;
-			left: 0;
-			transform: none;
-			margin-top: -91px;
-		}
+		// z-index: -1;
+		// content: "";
+		// display: block;
+		// position: absolute;
+		// width: 100%;
+		// height: 49px;
+		// left: 0;
+		// margin-top: -39px;
+		// // brace-wide
+		// background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNDQwIDE4MyI+PHBhdGggc3Ryb2tlPSIjMDIwQjQ5IiBkPSJNMTQ0MCAuMzQ0YzAgNDcuMDc3LTM4LjQ5IDg1LjQ3Ny04NS40OCA4NS40NzdIODYyLjA2MmMtNjMuMzI0IDAtMTE3LjMyMyA0MC4wNjItMTM4IDk2LjE4NWgtOC4xMjRjLTIwLjY3Ny01Ni4xMjMtNzQuNjc2LTk2LjE4NS0xMzcuOTA3LTk2LjE4NUg4NS40NzdDMzguNDkyIDg1LjgyMSAwIDQ3LjQyMSAwIC4zNDQiLz48L3N2Zz4=")
+		// 	center top / contain no-repeat;
 
-		@media (min-width: 1025px) and (max-width: 1439px) {
-			position: relative;
-			width: 1440px;
-			height: 183px;
-			left: 50%;
-			transform: translateX(-50%);
-			margin-top: -115px;
-		}
+		// @include respond-to(md) {
+		// 	height: 183px;
+		// 	margin-top: -115px;
+		// }
 
-		@include respond-to(xl) {
-			position: absolute;
-			width: 100%;
-			height: 183px;
-			left: 0;
-			transform: none;
-			margin-top: -115px;
-		}
+		// @include respond-to(lg) {
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: 130px;
+		// 	left: 0;
+		// 	transform: none;
+		// 	margin-top: -91px;
+		// }
+
+		// @media (min-width: 1025px) and (max-width: 1439px) {
+		// 	position: relative;
+		// 	width: 1440px;
+		// 	height: 183px;
+		// 	left: 50%;
+		// 	transform: translateX(-50%);
+		// 	margin-top: -115px;
+		// }
+
+		// @include respond-to(xl) {
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: 183px;
+		// 	left: 0;
+		// 	transform: none;
+		// 	margin-top: -115px;
+		// }
 
 		// position: relative;
 		// width: 1440px;
@@ -66,17 +124,6 @@
 		// transform: translateX(-50%);
 		// margin-top: -115px;
 	}
-
-	// &::before {
-	// 	content: "";
-	// 	display: block;
-	// 	position: absolute;
-	// 	width: 100%;
-	// 	left: 0;
-	// 	bottom: 84px;
-	// 	border-top: 1px solid $brand-color-secondary;
-	// 	z-index: -1;
-	// }
 
 	// .person__info
 	&__info {
@@ -91,8 +138,13 @@
 			display: flex;
 			align-items: flex-end;
 			position: relative;
-			padding-left: 75px;
-			min-height: 230px;
+			min-height: 160px;
+			padding-left: 25px;
+
+			@include respond-to(md) {
+				min-height: 230px;
+				padding-left: 75px;
+			}
 
 			@include respond-to(xl) {
 				padding-left: 115px;
@@ -101,14 +153,19 @@
 		// .person__col_right
 		&_right {
 			// flex-basis: 700px;
-			padding-left: 32px;
 			display: flex;
 			align-items: center;
+			padding-bottom: 25px;
+
+			@include respond-to(md) {
+				padding-left: 32px;
+				padding-bottom: 0;
+			}
 		}
 	}
 	// .person__wrapper
 	&__wrapper {
-		z-index: 1;
+		z-index: 2;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -119,33 +176,81 @@
 	}
 	// .person__name
 	&__name {
-		margin-top: 10px;
+		// margin-top: 10px;
+
+		@include respond-to(md) {
+			margin-top: 10px;
+		}
 	}
 	// .person__position
 	&__position {
 		transform-origin: top left;
 		transform: rotate(-90deg);
+		font-size: rem(11);
 		line-height: 1.2;
 		color: $brand-color-secondary;
 		position: absolute;
 		width: 50%;
 		top: 100%;
 		margin-top: -27px;
+
+		@include respond-to(md) {
+			font-size: rem(16);
+		}
 	}
 	// .person__photo
 	&__photo {
-		// width: 336px;
+		z-index: 1;
 		filter: saturate(0);
 		transition: all $transition-default;
-		border-bottom: 2px solid transparent;
-		max-width: 260px;
+		border-bottom: 1px solid transparent;
+		max-width: 80%;
+		margin-bottom: 11px;
+
+		@include respond-to(xm) {
+			max-width: 80%;
+		}
+
+		@include respond-to(md) {
+			max-width: 235px;
+			margin-bottom: -1px;
+		}
+
+		@include respond-to(lg) {
+			max-width: 260px;
+			margin-bottom: 0;
+			border-bottom-width: 2px;
+		}
 
 		@include respond-to(xl) {
 			max-width: 340px;
 		}
+
 		&.in-color {
 			filter: none;
 			border-bottom-color: $brand-color-secondary;
+		}
+	}
+
+	// .person__title
+	&__title {
+		width: 100%;
+		max-width: 250px;
+		font-size: rem(12);
+		line-height: 1.2;
+
+		@include respond-to(md) {
+			max-width: 320px;
+			font-size: rem(16);
+		}
+
+		@include respond-to(xl) {
+			font-size: rem(20);
+			width: 60%;
+			max-width: none;
+		}
+		@include respond-to(xxl) {
+			width: 50%;
 		}
 	}
 
@@ -161,20 +266,30 @@
 	}
 	// .person__control
 	&__control {
+		z-index: 1;
 		position: relative;
-		top: -12px;
+		top: -20px;
+
+		@include respond-to(md) {
+			top: -12px;
+		}
 	}
 }
 
 .plus-box {
-	width: 28px;
-	height: 28px;
+	width: 14px;
+	height: 14px;
 	position: relative;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+
+	@include respond-to(md) {
+		width: 28px;
+		height: 28px;
+	}
 
 	// .plus-box_active
 	&_active {
@@ -190,22 +305,39 @@
 		transition: all $transition-default;
 	}
 	&::before {
-		height: 28px;
+		height: 14px;
 		border-left: 2px solid $cyan;
 	}
 	&::after {
-		width: 28px;
+		width: 14px;
 		border-top: 2px solid $cyan;
+	}
+
+	@include respond-to(md) {
+		&::before {
+			height: 28px;
+		}
+
+		&::after {
+			width: 28px;
+		}
 	}
 }
 
 .article {
-	padding: 70px 0;
+	padding: 20px 0;
+
+	@include respond-to(md) {
+		padding: 70px 0;
+	}
 
 	// .article__row
 	&__row {
-		display: flex;
-		margin-bottom: 45px;
+		// margin-bottom: 45px;
+
+		@include respond-to(md) {
+			display: flex;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -215,30 +347,54 @@
 			}
 		}
 	}
+
 	// .article__header
 	&__header {
 		flex: 1;
-		margin: 0 15px 0 116px;
-		border-bottom: 2px solid $brand-color-secondary;
+		width: 50%;
+		padding-top: 23px;
+		margin-right: 15px;
+		border-top: 1px solid $brand-color-secondary;
+
+		@include respond-to(md) {
+			padding-top: 35px;
+			margin-left: 75px;
+		}
+		@include respond-to(lg) {
+			border-top: 2px solid $brand-color-secondary;
+		}
+
+		@include respond-to(xl) {
+			margin-left: 115px;
+		}
 
 		h4 {
 			margin-right: 50px;
 		}
 	}
+
 	// .article__content
 	&__content {
 		flex-basis: 50%;
-		padding-bottom: 60px;
+		padding: 20px 0 35px;
+		font-size: rem(12);
+
+		@include respond-to(md) {
+			padding: 35px 0 60px;
+			font-size: rem(16);
+		}
 
 		@include respond-to(xl) {
 			flex-basis: 700px;
 		}
+
 		p {
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
 	}
+
 	// .article__quote
 	&__quote {
 		margin: 37px auto 40px;

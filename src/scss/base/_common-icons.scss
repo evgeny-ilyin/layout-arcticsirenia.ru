@@ -1,10 +1,14 @@
 .icon-arrow-quote {
-	width: 35px;
-	height: 25px;
+	width: 25px;
+	height: 19px;
 
 	// position: absolute;
 	// top: 5px;
 	// left: -40px;
+	@include respond-to(md) {
+		width: 35px;
+		height: 25px;
+	}
 }
 
 .icon-arrow-news {
@@ -15,8 +19,13 @@
 }
 
 .icon-footnote {
-	width: 2.5vw;
-	height: 2.5vw;
+	width: 12px;
+	height: 12px;
+
+	@include respond-to(md) {
+		width: 2.5vw;
+		height: 2.5vw;
+	}
 
 	@include respond-to(lg) {
 		width: 23px;
@@ -25,9 +34,14 @@
 }
 
 .icon-dugon {
-	width: 330px;
+	width: 95%;
 	height: 101px;
 	transition: all $transition-default;
+
+	@include respond-to(md) {
+		width: 330px;
+		height: 101px;
+	}
 
 	@include respond-to(xl) {
 		width: 440px;
@@ -36,11 +50,17 @@
 }
 
 .icon-diver {
-	width: 94px;
+	width: 30%;
 	height: 69px;
 	left: 21%;
 	top: 18%;
 	transition: all $transition-default;
+
+	@include respond-to(md) {
+		width: 94px;
+		height: 69px;
+	}
+
 
 	@include respond-to(xl) {
 		width: 125px;
@@ -57,7 +77,6 @@
 	z-index: -1;
 	transition: all $transition-default;
 
-	
 	@include respond-to(xl) {
 		height: 37px;
 	}

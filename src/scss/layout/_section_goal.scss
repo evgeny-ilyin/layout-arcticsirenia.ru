@@ -1,7 +1,7 @@
 .goal {
 	position: relative;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 
 	// .goal__text
 	&__text {
@@ -10,10 +10,13 @@
 		left: 50%;
 		top: 50%;
 		transform: translateY(-60%);
-		padding-left: 19px;
+		padding-left: 7px;
 		font-size: 4.5vw;
 		letter-spacing: 2px;
 
+		@include respond-to(md) {
+			padding-left: 18px;
+		}
 		@include respond-to(lg) {
 			font-size: rem(43);
 		}
@@ -26,8 +29,12 @@
 	// .goal__footnote
 	&__footnote {
 		position: relative;
-		top: -1.2vw;
+		top: -1.1vw;
+		left: -5px;
 
+		@include respond-to(md) {
+			top: -1.2vw;
+		}
 		@include respond-to(lg) {
 			top: -15px;
 		}

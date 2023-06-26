@@ -11,9 +11,16 @@
 		width: 0;
 		border-left: 1px solid $brand-color-primary;
 		position: absolute;
+		// left: calc(50% - 1px);
 		left: 50%;
-		top: 190px;
-		bottom: 140px;
+		top: 200px;
+		bottom: 125px;
+
+		@include respond-to(md) {
+			top: 190px;
+			// left: 50%;
+			bottom: 140px;
+		}
 
 		@include respond-to(xl) {
 			bottom: 103px;
@@ -21,16 +28,18 @@
 	}
 
 	&::after {
-		z-index: 1;
-		content: "";
-		display: block;
-		width: 335px;
-		height: calc(358px * 5);
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		top: 370px;
-		background: url($bgr-dna) center top repeat-y;
+		@include respond-to(md) {
+			z-index: 1;
+			content: "";
+			display: block;
+			width: 335px;
+			height: calc(358px * 5);
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 370px;
+			background: url($bgr-dna) center top repeat-y;
+		}
 
 		@include respond-to(xl) {
 			width: 460px;
@@ -66,7 +75,19 @@
 
 	// .info_block2
 	&_block2 {
-		margin-top: 30px;
+		margin-top: 300px;
+
+		.info__link {
+			padding-left: 14px;
+
+			@include respond-to(md) {
+				padding-left: 0;
+			}
+		}
+
+		@include respond-to(md) {
+			margin-top: 30px;
+		}
 
 		@include respond-to(xl) {
 			margin-top: -130px;
@@ -75,9 +96,13 @@
 
 	// .info_block3
 	&_block3 {
-		margin-top: 15px;
+		margin-top: -115px;
 		display: flex;
 		flex-direction: column;
+
+		@include respond-to(lg) {
+			margin-top: 15px;
+		}
 
 		@include respond-to(xl) {
 			margin-top: -115px;
@@ -86,7 +111,13 @@
 
 	// .info_block4
 	&_block4 {
-		margin-top: -100px;
+		margin-top: -72px;
+		padding-left: 14px;
+
+		@include respond-to(md) {
+			margin-top: -100px;
+			padding-left: 0;
+		}
 
 		@include respond-to(xl) {
 			margin-top: 30px;
@@ -95,10 +126,13 @@
 
 	// .info_block5
 	&_block5 {
-		margin-top: -155px;
+		margin-top: 0;
 		display: flex;
 		flex-direction: column;
 
+		@include respond-to(md) {
+			margin-top: -155px;
+		}
 		@include respond-to(xl) {
 			margin-top: -270px;
 		}
@@ -106,12 +140,17 @@
 
 	// .info_block6
 	&_block6 {
-		margin-bottom: -625px;
-		margin-top: 156px;
+		margin-top: 126px;
+		margin-bottom: 380px;
+
+		@include respond-to(md) {
+			margin-top: 156px;
+			margin-bottom: -625px;
+		}
 
 		@include respond-to(xl) {
-			margin-bottom: -765px;
-			margin-top: 243px;
+			margin-top: 225px;
+			margin-bottom: -756px;
 		}
 	}
 
@@ -119,9 +158,21 @@
 	&_block7 {
 		position: absolute;
 		left: 0;
-		margin-top: -200px;
-		padding-right: $lg-padding;
+		margin-top: -285px;
 		max-width: calc($max-width / 2);
+
+		@include respond-to(xm) {
+			margin-top: -250px;
+		}
+
+		@include respond-to(md) {
+			padding-right: 65px;
+			margin-top: -215px;
+		}
+
+		@include respond-to(lg) {
+			padding-right: $lg-padding;
+		}
 
 		@include respond-to(xl) {
 			margin-top: -165px;
@@ -137,33 +188,69 @@
 	&__reg {
 		z-index: 1;
 		display: block;
-		font-size: rem(16);
+		font-size: rem(14);
 		font-weight: 400;
 		line-height: 1.2;
 		color: $white;
-		width: 35%;
+		max-width: 160px;
+
+		@include when-inside(".about__left") {
+			margin-right: 8px;
+		}
+		@include when-inside(".about__right") {
+			margin-left: 8px;
+		}
+
+		@include respond-to(md) {
+			font-size: rem(16);
+			width: 38%;
+			max-width: none;
+			padding: 0;
+
+			@include when-inside(".about__left") {
+				padding-right: 0;
+				margin-right: 0;
+			}
+			@include when-inside(".about__right") {
+				padding-left: 0;
+				margin-left: 0;
+			}
+		}
 
 		@include respond-to(xl) {
-			width: 25%;
+			width: 27%;
 		}
 	}
 	// .info__large
 	&__large {
 		z-index: 1;
 		display: block;
-		font-size: rem(50);
+		font-size: rem(27);
 		font-weight: 500;
 		line-height: 1;
 		color: $red;
 		transition: color $transition-default;
+
+		@include respond-to(md) {
+			font-size: rem(43);
+		}
+
+		@include respond-to(lg) {
+			font-size: rem(50);
+		}
 	}
 	// .info__note
 	&__note {
 		z-index: 1;
 		position: relative;
-		margin-top: 55px;
-		width: 200px;
+		margin-top: 20px;
+		padding-left: 10px;
 		align-self: end;
+		max-width: 207px;
+
+		@include respond-to(md) {
+			margin-top: 55px;
+		}
 
 		@include respond-to(xl) {
 			margin-top: 40px;
@@ -198,7 +285,11 @@
 				}
 
 				.info-population {
-					transform: translateY(-50%) scale(1.05);
+					transform: scale(1.05);
+
+					@include respond-to(lg) {
+						transform: translateY(-50%) scale(1.05);
+					}
 				}
 				.info-scull {
 					transform: scale(1.05);
@@ -208,17 +299,32 @@
 
 		&-image {
 			z-index: 1;
-			position: absolute;
 			transition: all $transition-default;
+			order: 1;
+			margin-top: 16px;
+
+			@include respond-to(lg) {
+				position: absolute;
+				margin-top: 0;
+			}
 		}
 	}
 
 	// .info__scale
 	&__scale {
 		position: relative;
-		width: 344px;
-		height: 143px;
+		width: 98%;
+		height: 100px;
 		margin: 20px 0;
+
+		@include respond-to(xm) {
+			height: 115px;
+		}
+
+		@include respond-to(md) {
+			width: 344px;
+			height: 143px;
+		}
 
 		@include respond-to(xl) {
 			width: 450px;
@@ -232,7 +338,16 @@
 	// .info__area
 	&__area {
 		margin-top: 9px;
-		width: 413px;
+		width: 150%;
+		max-width: 460px;
+
+		@include respond-to(md) {
+			width: 96%;
+		}
+
+		@include respond-to(lg) {
+			width: 413px;
+		}
 
 		@include respond-to(xl) {
 			width: 460px;
@@ -240,11 +355,21 @@
 	}
 
 	.info-population {
-		width: 252px;
+		width: 175px;
 		left: 15px;
-		top: 50%;
-		margin-top: -4px;
-		transform: translateY(-50%) scale(1);
+		top: 120%;
+		margin-right: -8px;
+
+		@include respond-to(md) {
+			margin-right: 0;
+		}
+
+		@include respond-to(lg) {
+			width: 252px;
+			top: 50%;
+			transform: translateY(-50%) scale(1);
+			margin-top: -4px;
+		}
 
 		@include respond-to(xl) {
 			width: 350px;
@@ -253,10 +378,21 @@
 	}
 
 	.info-scull {
-		width: 77%;
-		max-width: 313px;
-		left: 7%;
-		top: 25px;
+		// left: 7%;
+		// top: 25px;
+
+		position: absolute;
+		left: -30%;
+		margin-top: 45px;
+
+		@include respond-to(lg) {
+			width: 77%;
+			max-width: 313px;
+
+			left: 7%;
+			top: 25px;
+			margin-top: 0;
+		}
 
 		@include respond-to(xl) {
 			max-width: 440px;
@@ -273,15 +409,29 @@
 		text-align: left;
 
 		.info__large {
-			padding-left: 110px;
+			padding-left: 8px;
+
+			@include respond-to(md) {
+				padding-left: 110px;
+			}
 
 			@include respond-to(xl) {
 				padding-left: 124px;
 			}
 		}
+
+		.delimeter {
+			display: block;
+			margin-bottom: 11px;
+		}
+
 		.info__reg {
-			padding-left: 114px;
 			width: 100%;
+
+			@include respond-to(md) {
+				padding-left: 114px;
+			}
+
 			@include respond-to(xl) {
 				padding-left: 127px;
 			}
@@ -292,19 +442,29 @@
 .stellers-cow {
 	color: $white;
 	position: relative;
-	z-index: 4;
+	z-index: 3;
 	margin-top: -140px;
 	// margin-right: -130px;
+
+	@include respond-to(md) {
+		display: block;
+	}
 
 	@include respond-to(xl) {
 		margin-top: -160px;
 		// margin-right: -130px;
 	}
+
 	// .stellers-cow__image
 	&__image {
+		display: none;
 		// margin: -165px 0 0 100px
 		margin: 0 auto;
 		width: 72%;
+
+		@include respond-to(md) {
+			display: block;
+		}
 
 		@include respond-to(xl) {
 			width: auto;
@@ -313,10 +473,15 @@
 	}
 	// .stellers-cow__note
 	&__note {
+		display: none;
 		width: 150px;
 		position: absolute;
 		left: 48%;
 		bottom: 80px;
+
+		@include respond-to(md) {
+			display: block;
+		}
 
 		@include respond-to(xl) {
 			bottom: 165px;
@@ -326,13 +491,23 @@
 	&__info {
 		position: absolute;
 		top: 80%;
-		left: 70%;
-		width: 210px;
+		left: calc(50% + 7px);
+		width: 45%;
+		font-size: rem(14);
 		line-height: 1.2;
+		margin-top: 90px;
+
+		@include respond-to(md) {
+			margin-top: 0;
+			left: 70%;
+			width: 210px;
+			font-size: rem(16);
+		}
 
 		@include respond-to(xl) {
 			top: 38%;
 			left: 73%;
+			font-size: rem(18);
 		}
 
 		strong {
@@ -343,11 +518,27 @@
 }
 
 .delimeter {
-	display: block;
 	width: 100%;
-	border-bottom: 2px solid $white;
-	margin: 10px 0 11px;
+	margin: 5px 0 6px;
 	position: relative;
+
+	&::before,
+	&::after {
+		display: none;
+	}
+
+	@include respond-to(md) {
+		margin: 10px 0 11px;
+	}
+
+	@include respond-to(lg) {
+		border-bottom: 2px solid $white;
+
+		&::before,
+		&::after {
+			display: inline;
+		}
+	}
 
 	&::before {
 		content: "";
@@ -380,13 +571,24 @@
 
 .portraits {
 	display: flex;
-	margin: 15px 0 58px;
+	flex-direction: column;
+	margin: 20px 0 0;
+
+	@include respond-to(md) {
+		flex-direction: row;
+		margin: 15px 0 58px;
+	}
 }
 
 .portrait {
 	display: flex;
 	position: relative;
 	margin-right: 52px;
+	margin-bottom: 30px;
+
+	@include respond-to(md) {
+		margin-bottom: 0;
+	}
 
 	img {
 		width: 98px;
@@ -399,6 +601,10 @@
 		font-size: rem(12);
 		transform-origin: 0 0;
 		transform: rotate(-90deg);
+
+		@include respond-to(md) {
+			// font-size: rem(12);
+		}
 	}
 }
 
@@ -407,21 +613,25 @@
 	&__wrapper {
 		&::after {
 			content: "";
-			display: block;
+			display: none;
 			width: 100%;
-			height: 53px;
-			background: url($brace-narrow) center / cover no-repeat;
+			height: 65px;
+			background: url($brace-narrow) center top / 100% no-repeat;
 
-			@include respond-to(xl) {
-				height: 59px;
+			@include respond-to(md) {
+				display: block;
 			}
 		}
 	}
 	// .area__legend
 	&__legend {
-		padding: 28px 85px 0;
+		padding: 28px 30px 18px;
 		background: $grey-light2;
-		border-bottom: 1px solid $brand-color-secondary;
+
+		@include respond-to(md) {
+			padding: 28px 85px 0;
+			border-bottom: 1px solid $brand-color-secondary;
+		}
 
 		@include respond-to(xl) {
 			padding: 28px 116px 0;
@@ -430,33 +640,53 @@
 	// .area__text
 	&__text {
 		color: $grey-mid;
-		font-size: rem(14);
-		margin-bottom: 45px;
+		font-size: rem(12);
+		margin-bottom: 15px;
+
+		@include respond-to(md) {
+			font-size: rem(14);
+			margin-bottom: 45px;
+		}
 
 		strong {
 			color: $cyan;
 			display: block;
-			font-size: rem(45);
+			font-size: rem(27);
 			line-height: 1;
 			font-weight: 700;
+
+			@include respond-to(md) {
+				font-size: rem(45);
+			}
 		}
 	}
 	// .area__quote
 	&__quote {
+		display: none;
 		padding: 78px 85px 54px;
 		background: $white;
 
+		@include respond-to(md) {
+			display: block;
+			padding: 78px 65px 54px 60px;
+		}
+
 		@include respond-to(xl) {
-			padding: 55px 116px 46px;
+			padding: 55px 100px 46px 116px;
 		}
 	}
 }
 
 .circle {
-	width: 25px;
-	height: 25px;
+	width: 17px;
+	height: 17px;
 	border-radius: 50%;
 	margin-bottom: 5px;
+
+	@include respond-to(md) {
+		width: 25px;
+		height: 25px;
+	}
 
 	// .circle_red
 	&_red {
@@ -473,8 +703,13 @@
 	// display: flex;
 	// flex-direction: column;
 	text-align: left;
-	margin-top: 50px;
-	margin-left: 7px;
+	margin-top: 37px;
+	margin-left: calc(-60px / 2);
+
+	@include respond-to(md) {
+		margin-top: 50px;
+		margin-left: 7px;
+	}
 
 	@include respond-to(lgx) {
 		margin-top: 68px;
@@ -486,9 +721,13 @@
 
 .step {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: flex-start;
-	margin-bottom: 40px;
+	margin-bottom: 46px;
+
+	@include respond-to(md) {
+		flex-direction: row;
+	}
 
 	@include respond-to(xl) {
 		margin-bottom: 40px;
@@ -503,6 +742,9 @@
 			&::before {
 				display: none;
 			}
+		}
+		.step__descr {
+			text-shadow: 0 0 3px $black;
 		}
 	}
 
@@ -551,12 +793,19 @@
 		flex: 0 0 auto;
 		justify-content: center;
 		align-items: center;
-		width: 85px;
-		height: 85px;
 		border-radius: 50%;
-		font-size: rem(43);
 		font-weight: 500;
+		width: 60px;
+		height: 60px;
+		font-size: rem(28);
 		padding: 2px 0 0 2px;
+		margin-bottom: 17px;
+
+		@include respond-to(md) {
+			width: 85px;
+			height: 85px;
+			font-size: rem(43);
+		}
 
 		@include respond-to(xl) {
 			width: 98px;
@@ -565,33 +814,42 @@
 			padding: 2px 0 0 2px;
 		}
 
-		&::before {
-			content: "";
-			display: block;
-			width: 5px;
-			height: 5px;
-			border-radius: 50%;
-			position: absolute;
-			top: -2px;
-			left: calc(50% - 2px);
-			background: $cyan;
+		@include respond-to(md) {
+			&::before {
+				content: "";
+				display: block;
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				position: absolute;
+				top: -2px;
+				left: calc(50% - 2px);
+				background: $cyan;
+			}
 		}
 	}
 	// .step__descr
 	&__descr {
 		position: relative;
-		padding-left: 22px;
 		max-width: 450px;
 
+		@include respond-to(md) {
+			padding-left: 22px;
+		}
+
 		&::before {
+			display: none;
 			content: "";
 			position: absolute;
 			left: calc(-85px / 2);
 			top: 85px;
-			display: block;
 			height: 110%;
 			border-left: 1px solid $cyan;
 			z-index: -1;
+
+			@include respond-to(md) {
+				display: block;
+			}
 
 			@include respond-to(xl) {
 				left: calc(-98px / 2);
@@ -603,13 +861,33 @@
 		}
 
 		p {
+			max-width: 250px;
 			margin: 11px 0 0;
+			padding-right: 30px;
+			font-size: rem(12);
 			line-height: 1.2;
-			max-width: 345px;
+
+			@include respond-to(md) {
+				font-size: rem(14);
+				max-width: 270px;
+			}
+
+			@include respond-to(lg) {
+				font-size: rem(16);
+				max-width: 345px;
+			}
 		}
 	}
 	// .step__quote
 	&__quote {
+		margin-left: -15px;
 		margin-top: 25px;
+
+		@include respond-to(md) {
+			margin-left: -24px;
+		}
+		@include respond-to(lg) {
+			margin-left: 0;
+		}
 	}
 }

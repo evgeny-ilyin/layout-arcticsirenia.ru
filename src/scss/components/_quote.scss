@@ -2,7 +2,11 @@
 	display: flex;
 	// position: relative;
 	width: 100%;
-	max-width: 320px;
+	max-width: 250px;
+
+	@include respond-to(md) {
+		max-width: 320px;
+	}
 
 	@include respond-to(xl) {
 		width: 60%;
@@ -13,14 +17,26 @@
 		width: 50%;
 	}
 
+	@include when-inside(".info") {
+		padding-right: 5px;
+	}
+
 	// .quote__wrapper
 	&__wrapper {
-		width: 35px;
+		width: 25px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 5px 8px 5px 0;
-		margin: 0 8px 0 -43px;
+		padding: 0 8px 0 0;
+		margin-left: -11px;
+
+		@include respond-to(md) {
+			width: 35px;
+			padding: 5px 8px 5px 0;
+		}
+		@include respond-to(lg) {
+			margin: 0 8px 0 -43px;
+		}
 	}
 
 	// .quote_blue
@@ -30,20 +46,18 @@
 
 	// .quote_w100
 	&_w100 {
-		width: 100%;
+		width: 100% !important;
 	}
 
 	// .quote__vertical
 	&__vertical {
-		// position: absolute;
-		// top: calc(100% - 5px);
-		// left: 0;
-		// margin-left: -33px;
-		// transform-origin: 0 0;
-
-		font-size: rem(12);
+		font-size: rem(9);
 		line-height: 1.2;
 		transform: rotate(-90deg);
+
+		@include respond-to(md) {
+			font-size: rem(12);
+		}
 
 		@include respond-to(xl) {
 			white-space: nowrap;
@@ -52,8 +66,16 @@
 	}
 	// .quote__text
 	&__text {
-		font-size: rem(16);
+		font-size: rem(12);
 		line-height: 1.2;
+
+		// @include when-inside(".article__quote") {
+		// 	font-size: rem(12);
+		// }
+
+		@include respond-to(md) {
+			font-size: rem(16);
+		}
 
 		@include respond-to(xl) {
 			font-size: rem(20);

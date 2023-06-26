@@ -3,8 +3,18 @@
 .navigation {
 	display: flex;
 	justify-content: space-between;
-	flex-basis: 50%;
+	flex-basis: 100%;
+	width: 100%;
 	border-left: 1px solid $brand-color-primary;
+
+	@include respond-to(xm) {
+		flex-basis: 50%;
+		width: 50%;
+	}
+
+	// @include respond-to(sm) {
+	// 	width: 50%;
+	// }
 
 	// .navigation_fixed
 	&_fixed {
@@ -32,20 +42,37 @@
 }
 
 .nav {
-	padding: 36px 19px 31px;
+	padding: 20px 7px;
+
+	@include respond-to(xm) {
+		padding: 20px 19px;
+	}
+
+	@include respond-to(md) {
+		padding: 36px 19px 31px;
+	}
 
 	@include when-inside(".footer") {
-		padding-bottom: 87px;
+		padding: 0 19px 20px;
+
+		@include respond-to(xm) {
+			padding: 36px 19px 87px;
+		}
 
 		@include respond-to(xl) {
 			padding-bottom: 128px;
 		}
 	}
+
 	// .nav__list
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
+		gap: 12px;
+
+		@include respond-to(md) {
+			gap: 15px;
+		}
 
 		@include respond-to(xl) {
 			gap: 19px;
@@ -55,7 +82,16 @@
 	&__item {
 		padding: 0;
 		margin: 0;
+		font-size: rem(12);
 		line-height: 1;
+
+		@include respond-to(sm) {
+			font-size: rem(14);
+		}
+
+		@include respond-to(md) {
+			font-size: rem(16);
+		}
 	}
 	// .nav__link
 	&__link {

@@ -1,21 +1,40 @@
 .logo {
-	// display: flex;
-	flex-basis: 50%;
+	display: flex;
+	flex-basis: 100%;
+	width: 100%;
 	justify-content: center;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-top: 48px;
-	padding-right: 50px;
+
+	@include when-inside(".footer") {
+		margin-top: 45px;
+		margin-bottom: 60px;
+
+		@include respond-to(xm) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	@include respond-to(xm) {
+		flex-basis: 50%;
+		width: 50%;
+	}
 
 	// .logo_fixed
 	&_fixed {
-		padding-top: 25px;
+		// padding-top: 25px;
 	}
 
 	// .logo__link
 	&__link {
-		margin-left: -39px;
+		margin-left: 0;
 		display: inline-block;
+		padding-right: 15px;
+
+		@include respond-to(lg) {
+			margin-left: -39px;
+		}
 
 		@include respond-to(xl) {
 			margin-left: -45px;
@@ -24,12 +43,20 @@
 
 	// .logo__svg
 	&__svg {
-		width: 198px;
-		height: 99px;
+		width: 100%;
+		max-width: 198px;
+		min-width: 122px;
+		height: 114px;
 		fill: $text-color;
+
+		@include respond-to(lg) {
+			width: 198px;
+			height: 99px;
+		}
 
 		@include respond-to(xl) {
 			width: 228px;
+			max-width: none;
 			height: 114px;
 		}
 
@@ -40,11 +67,16 @@
 
 	// .logo__slogan
 	&__slogan {
+		display: none;
 		max-width: 333px;
 		color: $white;
 		font-size: 0.75rem;
 		margin-top: 21px;
-		
+
+		@include respond-to(xm) {
+			display: block;
+		}
+
 		@include respond-to(xl) {
 			margin-top: 56px;
 		}

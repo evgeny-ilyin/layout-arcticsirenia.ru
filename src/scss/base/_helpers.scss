@@ -26,9 +26,25 @@
 	scroll-margin-top: 85px;
 	scroll-snap-margin-top: 85px;
 
+	.info_block7 {	// project
+		scroll-margin-top: 86px;
+		scroll-snap-margin-top: 86px;
+	}
+
+
 	&.news {
-		scroll-margin-top: -137px;
-		scroll-snap-margin-top: -137px;
+		scroll-margin-top: -12px;
+		scroll-snap-margin-top: -12px;
+
+		@include respond-to(md) {
+			scroll-margin-top: -65px;
+			scroll-snap-margin-top: -65px;
+		}
+
+		@include respond-to(xl) {
+			scroll-margin-top: -137px;
+			scroll-snap-margin-top: -137px;
+		}
 	}
 
 	&.publications {

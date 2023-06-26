@@ -3,4 +3,11 @@
 // -----------------------------------------------------------------------------
 .footer {
 	display: flex;
+	flex-direction: column;
+	// padding-top: 34px;
+	// padding-left: 55px;
+
+	@include respond-to(xm) {
+		flex-direction: row;
+	}
 }
