@@ -35,25 +35,6 @@ function navClick() {
 	});
 }
 
-// export function stickyHeader() {
-// 	const hasMainCarousel = document.querySelector(".swiper-main"),
-// 		header = document.querySelector("header");
-
-// 	hasMainCarousel ? header.classList.add("header_contrast") : "";
-
-// 	let handleScroll = () => {
-// 		if (window.scrollY > 0) {
-// 			header.classList.add("header_fixed");
-// 			hasMainCarousel ? header.classList.remove("header_contrast") : "";
-// 		} else {
-// 			header.classList.remove("header_fixed");
-// 			hasMainCarousel ? header.classList.add("header_contrast") : "";
-// 		}
-// 	};
-// 	window.addEventListener("scroll", handleScroll);
-// 	handleScroll();
-// }
-
 function stickyHeader() {
 	const body = document.body,
 		menuCheckbox = document.getElementById("menu-toggle"),
