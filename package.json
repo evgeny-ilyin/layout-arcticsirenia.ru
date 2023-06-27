@@ -1,6 +1,5 @@
 {
 	"devDependencies": {
-		"@fancyapps/ui": "^5.0.19",
 		"browser-sync": "^2.29.3",
 		"del": "^7.0.0",
 		"gulp": "^4.0.2",
@@ -25,7 +24,6 @@
 		"gulp-webp-html-nosvg": "^1.1.1",
 		"gulp-webpcss": "^1.1.1",
 		"gulp-zip": "^5.1.0",
-		"isotope-layout": "^3.0.6",
 		"lc-select": "^1.1.8",
 		"node-sass-tilde-importer": "^1.0.2",
 		"nouislider": "^15.7.1",

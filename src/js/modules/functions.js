@@ -30,25 +30,6 @@ export function navClick() {
 	});
 }
 
-// export function stickyHeader() {
-// 	const hasMainCarousel = document.querySelector(".swiper-main"),
-// 		header = document.querySelector("header");
-
-// 	hasMainCarousel ? header.classList.add("header_contrast") : "";
-
-// 	let handleScroll = () => {
-// 		if (window.scrollY > 0) {
-// 			header.classList.add("header_fixed");
-// 			hasMainCarousel ? header.classList.remove("header_contrast") : "";
-// 		} else {
-// 			header.classList.remove("header_fixed");
-// 			hasMainCarousel ? header.classList.add("header_contrast") : "";
-// 		}
-// 	};
-// 	window.addEventListener("scroll", handleScroll);
-// 	handleScroll();
-// }
-
 export function stickyHeader() {
 	const body = document.body,
 		menuCheckbox = document.getElementById("menu-toggle"),
@@ -128,4 +109,54 @@ export function accordionPerson() {
 			}
 		});
 	});
+}
+
+export function cowHeight() {
+	let setHeight = () => {
+		const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height,
+			sectionNext = document.querySelector(".stellers-cow");
+		sectionNext.style.height = `${cowH}px`;
+	};
+
+	window.addEventListener("load", setHeight);
+	window.addEventListener("resize", setHeight);
+}
+
+/* export function moooo() {
+	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
+	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
+	const stopMove = document.querySelector(".info_block7").offsetTop;
+	// const viewportH = window.visualViewport.height;
+
+	if (startMove < 0) {
+		if (window.scrollY >= stopMove) {
+			document.body.style.cssText = `--scrollTop: ${stopMove - cowH}px`;
+		} else {
+			document.body.style.cssText = `--scrollTop: ${window.scrollY - cowH}px`;
+		}
+	} else {
+		document.body.style.cssText = `--scrollTop: 0`;
+	}
+
+	window.addEventListener("load", moooo);
+	window.addEventListener("scroll", moooo);
+} */
+
+export function moooo() {
+	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
+	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
+	const stopMove = document.querySelector(".info_block7").offsetTop;
+
+	if (startMove < 0) {
+		if (window.scrollY >= stopMove) {
+			document.querySelector(".parallax-cow").style.top = `${stopMove - cowH}px`;
+		} else {
+			document.querySelector(".parallax-cow").style.top = `${window.scrollY - cowH}px`;
+		}
+	} else {
+		document.querySelector(".parallax-cow").style.top = 0;
+	}
+
+	window.addEventListener("load", moooo);
+	window.addEventListener("scroll", moooo);
 }

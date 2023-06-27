@@ -95,11 +95,13 @@ $xxl-padding: 15px !default;
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
 	"xs": 320px,
+	"iphoneX": 375px,
 	"sm": 390px,
 	"xm": 577px,
 	"md": 768px,
 	"lg": 1024px,
 	"lgx": 1200px,
+	"ipadpro": 1366px,
 	"xl": 1440px,
 	"xxl": 1900px,
 ) !default;

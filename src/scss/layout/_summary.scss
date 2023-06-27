@@ -2,10 +2,53 @@
 	position: relative;
 	background: $brand-color-secondary url(@img/bgr_about.png) 35% 280px no-repeat;
 
+	&::before {
+		z-index: 1;
+		content: "";
+		display: block;
+		width: 0;
+		border-left: 1px solid $brand-color-primary;
+		position: absolute;
+		left: 50%;
+		top: 200px;
+		bottom: 125px;
+
+		@include respond-to(md) {
+			top: 190px;
+			bottom: 125px;
+		}
+
+		@include respond-to(xl) {
+			bottom: 103px;
+		}
+	}
+
+	&__dna {
+		@include respond-to(md) {
+			display: block;
+			width: 335px;
+			height: calc(358px * 5);
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 370px;
+			background: url($bgr-dna) center top repeat-y;
+		}
+
+		@include respond-to(xl) {
+			width: 460px;
+			height: calc(490px * 4);
+			top: 425px;
+		}
+	}
+
+	
 	@include respond-to(md) {
 		background-position: center 850px;
 	}
+	
 	&::after {
+		z-index: -1;
 		content: "";
 		display: block;
 		position: absolute;

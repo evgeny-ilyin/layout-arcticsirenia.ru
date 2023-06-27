@@ -1,29 +1,39 @@
 .team {
-	// margin-bottom: -46px;
-	margin-bottom: -14.2vw;
+	margin-bottom: -44px;
+
+	@include respond-to(iphoneX) {
+		margin-bottom: -48px;
+	}
 
 	@include respond-to(sm) {
-		margin-bottom: -11.4vw;
+		margin-bottom: -49px;
 	}
 
 	@include respond-to(xm) {
-		margin-bottom: -10.3vw;
+		margin-bottom: -59px;
 	}
 
 	@include respond-to(md) {
-		margin-bottom: -9.6vw;
+		margin-bottom: -73px;
 	}
 
 	@include respond-to(lg) {
-		margin-bottom: -8.8vw;
+		margin-bottom: -89px;
 	}
 
 	@include respond-to(lgx) {
-		margin-bottom: -8.4vw;
+		margin-bottom: -100px;
+	}
+
+	@include respond-to(ipadpro) {
+		margin-bottom: -111px;
 	}
 
 	@include respond-to(xl) {
-		// margin-bottom: -8vw;
+		margin-bottom: -115px;
+	}
+
+	@include respond-to(xxl) {
 		margin-bottom: -115px;
 	}
 
@@ -213,7 +223,7 @@
 
 		@include respond-to(md) {
 			max-width: 235px;
-			margin-bottom: -1px;
+			margin-bottom: 0;
 		}
 
 		@include respond-to(lg) {
