@@ -714,6 +714,34 @@ strong {
 .info__link-wrapper:hover .delimeter::before {
   border-color: #fff
 }
+.info__link-wrapper:active .delimeter::before,
+.info__link-wrapper:focus .delimeter::before,
+.info__link-wrapper:hover .delimeter::before {
+  -webkit-transform: rotate(45deg) translate(-29px,11px);
+  -ms-transform: rotate(45deg) translate(-29px,11px);
+  transform: rotate(45deg) translate(-29px,11px)
+}
+.info__link-wrapper:active .delimeter::after,
+.info__link-wrapper:focus .delimeter::after,
+.info__link-wrapper:hover .delimeter::after {
+  -webkit-transform: rotate(45deg) translate(-29px,30px);
+  -ms-transform: rotate(45deg) translate(-29px,30px);
+  transform: rotate(45deg) translate(-29px,30px)
+}
+.about__right .info__link-wrapper:active .delimeter::before,
+.about__right .info__link-wrapper:focus .delimeter::before,
+.about__right .info__link-wrapper:hover .delimeter::before {
+  -webkit-transform: rotate(45deg) translate(11px,-29px);
+  -ms-transform: rotate(45deg) translate(11px,-29px);
+  transform: rotate(45deg) translate(11px,-29px)
+}
+.about__right .info__link-wrapper:active .delimeter::after,
+.about__right .info__link-wrapper:focus .delimeter::after,
+.about__right .info__link-wrapper:hover .delimeter::after {
+  -webkit-transform: rotate(45deg) translate(11px,-11px);
+  -ms-transform: rotate(45deg) translate(11px,-11px);
+  transform: rotate(45deg) translate(11px,-11px)
+}
 .info__link-wrapper:active .info-population,
 .info__link-wrapper:focus .info-population,
 .info__link-wrapper:hover .info-population {
@@ -1038,7 +1066,7 @@ strong {
   margin-top: 25px
 }
 .team {
-  margin-bottom: -44px
+  margin-bottom: -45px
 }
 .team__wrapper {
   position: relative;
@@ -1813,12 +1841,12 @@ input[type=checkbox]:disabled {
 }
 @media (min-width:375px) {
   .team {
-    margin-bottom: -48px
+    margin-bottom: -49px
   }
 }
 @media (min-width:390px) {
   .team {
-    margin-bottom: -49px
+    margin-bottom: -51px
   }
   .nav__item {
     font-size: .875rem
@@ -1835,7 +1863,7 @@ input[type=checkbox]:disabled {
     height: 115px
   }
   .team {
-    margin-bottom: -59px
+    margin-bottom: -60px
   }
   .person__photo {
     max-width: 80%
@@ -2109,7 +2137,7 @@ input[type=checkbox]:disabled {
   }
   .person__photo {
     max-width: 235px;
-    margin-bottom: 0
+    margin-bottom: -1px
   }
   .person__title {
     max-width: 320px;
@@ -2193,6 +2221,11 @@ input[type=checkbox]:disabled {
   }
   .quote__text {
     font-size: 1rem
+  }
+}
+@media (min-width:820px) {
+  .team {
+    margin-bottom: -77px
   }
 }
 @media (min-width:1024px) {
@@ -2287,7 +2320,7 @@ input[type=checkbox]:disabled {
   }
   .person__photo {
     max-width: 260px;
-    margin-bottom: 0;
+    margin-bottom: -2px;
     border-bottom-width: 2px
   }
   .article__header {
