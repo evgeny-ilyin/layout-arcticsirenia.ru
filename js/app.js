@@ -127,40 +127,44 @@ function cowHeight() {
 	window.addEventListener("resize", setHeight);
 }
 
-function moooo() {
+/* export function moooo() {
 	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
 	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
 	const stopMove = document.querySelector(".info_block7").offsetTop;
 	// const viewportH = window.visualViewport.height;
 
 	if (startMove < 0) {
-		if (this.scrollY >= stopMove) {
-			return;
+		if (window.scrollY >= stopMove) {
+			document.body.style.cssText = `--scrollTop: ${stopMove - cowH}px`;
+		} else {
+			document.body.style.cssText = `--scrollTop: ${window.scrollY - cowH}px`;
 		}
-		document.body.style.cssText = `--scrollTop: ${this.scrollY - cowH}px`;
 	} else {
 		document.body.style.cssText = `--scrollTop: 0`;
 	}
 
+	window.addEventListener("load", moooo);
+	window.addEventListener("scroll", moooo);
+} */
+
+function moooo() {
+	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
+	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
+	const stopMove = document.querySelector(".info_block7").offsetTop;
+
+	if (startMove < 0) {
+		if (window.scrollY >= stopMove) {
+			document.querySelector(".parallax-cow").style.top = `${stopMove - cowH}px`;
+		} else {
+			document.querySelector(".parallax-cow").style.top = `${window.scrollY - cowH}px`;
+		}
+	} else {
+		document.querySelector(".parallax-cow").style.top = 0;
+	}
+
+	window.addEventListener("load", moooo);
 	window.addEventListener("scroll", moooo);
 }
-
-// function mooooTop() {
-// 	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
-// 	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
-// 	const stopMove = document.querySelector(".info_block7").offsetTop;
-
-// 	if (startMove < 0) {
-// 		if (this.scrollY >= stopMove) {
-// 			return;
-// 		}
-// 		document.querySelector(".parallax-cow").style.top = `${this.scrollY - cowH}px`;
-// 	} else {
-// 		document.querySelector(".parallax-cow").style.top = 0;
-// 	}
-
-// 	window.addEventListener("scroll", mooooTop);
-// }
 
 ;// CONCATENATED MODULE: ./src/js/app.js
 

@@ -781,14 +781,13 @@ strong {
   position: absolute;
   width: 100%;
   top: 0;
-  left: 5%;
-  -webkit-transform: translate3d(0,var(--scrollTop),0);
-  transform: translate3d(0,var(--scrollTop),0);
-  -webkit-transition: -webkit-transform 2s ease-out;
-  transition: -webkit-transform 2s ease-out;
-  -o-transition: transform 2s ease-out;
-  transition: transform 2s ease-out;
-  transition: transform 2s ease-out,-webkit-transform 2s ease-out
+  left: 50%;
+  -webkit-transform: translateX(-44%);
+  -ms-transform: translateX(-44%);
+  transform: translateX(-44%);
+  -webkit-transition: top 1.5s ease-out;
+  -o-transition: top 1.5s ease-out;
+  transition: top 1.5s ease-out
 }
 .parallax-cow__image {
   display: none;
