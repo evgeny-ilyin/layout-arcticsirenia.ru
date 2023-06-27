@@ -135,9 +135,57 @@ function accordionPerson() {
 	});
 }
 
+function cowHeight() {
+	let setHeight = () => {
+		const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height,
+			sectionNext = document.querySelector(".stellers-cow");
+		sectionNext.style.height = `${cowH}px`;
+	};
+
+	window.addEventListener("load", setHeight);
+	window.addEventListener("resize", setHeight);
+}
+
+function moooo() {
+	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
+	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
+	const stopMove = document.querySelector(".info_block7").offsetTop;
+	// const viewportH = window.visualViewport.height;
+
+	if (startMove < 0) {
+		if (this.scrollY >= stopMove) {
+			return;
+		}
+		document.body.style.cssText = `--scrollTop: ${this.scrollY - cowH}px`;
+	} else {
+		document.body.style.cssText = `--scrollTop: 0`;
+	}
+
+	window.addEventListener("scroll", moooo);
+}
+
+// function mooooTop() {
+// 	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
+// 	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
+// 	const stopMove = document.querySelector(".info_block7").offsetTop;
+
+// 	if (startMove < 0) {
+// 		if (this.scrollY >= stopMove) {
+// 			return;
+// 		}
+// 		document.querySelector(".parallax-cow").style.top = `${this.scrollY - cowH}px`;
+// 	} else {
+// 		document.querySelector(".parallax-cow").style.top = 0;
+// 	}
+
+// 	window.addEventListener("scroll", mooooTop);
+// }
+
 ;// CONCATENATED MODULE: ./src/js/app.js
 
 isWebp();
+cowHeight();
+moooo();
 navClick();
 stickyHeader();
 menuToggle();
