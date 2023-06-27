@@ -241,6 +241,22 @@
 					&::after {
 						border-color: $white;
 					}
+
+					&::before {
+						transform: rotate(45deg) translate(-29px, 11px);
+					}
+					&::after {
+						transform: rotate(45deg) translate(-29px, 30px);
+					}
+
+					@include when-inside(".about__right") {
+						&::before {
+							transform: rotate(45deg) translate(11px, -29px);
+						}
+						&::after {
+							transform: rotate(45deg) translate(11px, -11px);
+						}
+					}
 				}
 
 				.info-population {
