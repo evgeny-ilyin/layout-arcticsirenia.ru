@@ -2316,11 +2316,10 @@ input[type=checkbox]:disabled {
     margin-left: 0
   }
   .team {
-    margin-bottom: -89px
+    margin-bottom: -90px
   }
   .person__photo {
     max-width: 260px;
-    margin-bottom: -2px;
     border-bottom-width: 2px
   }
   .article__header {
@@ -2354,6 +2353,9 @@ input[type=checkbox]:disabled {
 @media (min-width:1366px) {
   .team {
     margin-bottom: -111px
+  }
+  .person__photo {
+    margin-bottom: 0
   }
 }
 @media (min-width:1440px) {
@@ -2496,7 +2498,7 @@ input[type=checkbox]:disabled {
     left: -49px
   }
   .team {
-    margin-bottom: -115px
+    margin-bottom: -116px
   }
   .person {
     margin-top: 50px
@@ -2595,9 +2597,6 @@ input[type=checkbox]:disabled {
   }
   .info_block7 {
     padding-right: 15px
-  }
-  .team {
-    margin-bottom: -115px
   }
   .person__title {
     width: 50%
