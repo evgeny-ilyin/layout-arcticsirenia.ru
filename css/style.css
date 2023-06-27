@@ -1912,7 +1912,7 @@ input[type=checkbox]:disabled {
   }
   .summary::before {
     top: 190px;
-    bottom: 140px
+    bottom: 125px
   }
   .summary__dna {
     display: block;
@@ -1953,8 +1953,8 @@ input[type=checkbox]:disabled {
     margin-bottom: -625px
   }
   .info_block7 {
-    padding-right: 65px;
-    margin-top: -215px
+    margin-top: -200px;
+    padding-right: 65px
   }
   .info__reg {
     font-size: 1rem;
@@ -2227,6 +2227,7 @@ input[type=checkbox]:disabled {
     margin-top: 15px
   }
   .info_block7 {
+    margin-top: -185px;
     padding-right: 85px
   }
   .info__large {
