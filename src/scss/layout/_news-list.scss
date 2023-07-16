@@ -1,0 +1,14 @@
+.news-list {
+	flex: 1;
+
+	// .news-list__wrapper
+	&__wrapper {
+		max-width: 700px;
+		margin: 20px auto;
+	}
+
+	// .news-list__pagination
+	&__pagination {
+		margin: 50px 0 65px;
+	}
+}

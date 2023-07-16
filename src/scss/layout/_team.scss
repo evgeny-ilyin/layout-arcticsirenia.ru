@@ -192,6 +192,7 @@
 			margin-top: 10px;
 		}
 	}
+	
 	// .person__position
 	&__position {
 		transform-origin: top left;
@@ -205,6 +206,10 @@
 		margin-top: -27px;
 
 		@include respond-to(md) {
+			font-size: rem(14);
+		}
+
+		@include respond-to(lg) {
 			font-size: rem(16);
 		}
 	}

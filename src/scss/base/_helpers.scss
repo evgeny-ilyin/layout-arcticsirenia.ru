@@ -26,13 +26,13 @@
 	scroll-margin-top: 85px;
 	scroll-snap-margin-top: 85px;
 
-	.info_block7 {	// project
+	.info_block7 {
+		// project
 		scroll-margin-top: 86px;
 		scroll-snap-margin-top: 86px;
 	}
 
-
-	&.news {
+	&.news-main {
 		scroll-margin-top: -12px;
 		scroll-snap-margin-top: -12px;
 
@@ -182,6 +182,18 @@
  */
 .blink {
 	animation: fadeEffect 0.8s;
+}
+
+/**
+ *Webkit text flickers when using CSS transform (scale)
+ *https://stackoverflow.com/questions/12278587/webkit-text-flickers-when-using-css-transform-scale
+ */
+.no-flickr {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
 }
 
 /**

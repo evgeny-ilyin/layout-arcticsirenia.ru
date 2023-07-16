@@ -8,10 +8,7 @@
 // 2. Vendors
 @import "vendors/normalize";
 @import "vendors/reset";
-// @import "vendors/swiper";
-// @import "~@fancyapps/ui/dist/fancybox";
-// @import "~lc-select/themes/light";
-// @import "~nouislider/dist/nouislider";
+@import "~@fancyapps/ui/dist/fancybox/fancybox";
 
 // 3. Base stuff
 @import "base/base";
@@ -19,7 +16,8 @@
 @import "base/grid";
 @import "base/typography";
 @import "base/helpers";
-@import "base/common-icons";
+@import "base/icons-common";
+@import "base/icons-pseudo";
 
 // 4. Layout-related sections
 @import "layout/header";
@@ -27,7 +25,9 @@
 @import "layout/section_goal";
 @import "layout/section_about";
 @import "layout/team";
-@import "layout/news";
+@import "layout/news-main";
+@import "layout/news-list";
+@import "layout/news-item";
 @import "layout/publications";
 @import "layout/footer";
 
@@ -37,6 +37,8 @@
 @import "components/social";
 @import "components/quote";
 @import "components/button";
+@import "components/pagination";
+
 @import "components/form";
 @import "components/checkbox";
 @import "components/svg-sprite";

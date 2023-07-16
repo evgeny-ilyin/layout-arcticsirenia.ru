@@ -1,4 +1,4 @@
-/*! reset.css | github.com/PsychoPuss/modern-css-reset */
+/*! reset.css | https://github.com/i-evgeny/modern-css-reset */
 /* Outline rules */
 :active,
 :focus,
@@ -36,10 +36,14 @@ html {
 	scroll-behavior: smooth
 }
 
-/* Set core body defaults */
-/*body {
-	// text-rendering: optimizeSpeed; // off, coz disables ligatures and kerning (SwiperJS not showing next/prev icons) https://stackoverflow.com/questions/69258650/swiperjs-not-showing-next-prev-icons-but-area-is-clickable
-}*/
+/* Set core body defaults
+При отрисовке текста браузер будет ставить в приоритет именно скорость отрисовки, поэтому лигатуры и кернинг будут отключены.
+https://doka.guide/css/text-rendering/demos/ligatures/
+Может быть причиной ошибок в плагинах (SwiperJS не показывает next/prev иконки) https://stackoverflow.com/questions/69258650/swiperjs-not-showing-next-prev-icons-but-area-is-clickable
+*/
+body {
+	text-rendering: optimizeSpeed;
+}
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ol[class],

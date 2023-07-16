@@ -24,15 +24,11 @@
 		"gulp-webp-html-nosvg": "^1.1.1",
 		"gulp-webpcss": "^1.1.1",
 		"gulp-zip": "^5.1.0",
-		"lc-select": "^1.1.8",
 		"node-sass-tilde-importer": "^1.0.2",
-		"nouislider": "^15.7.1",
 		"sass": "^1.63.4",
-		"swiper": "^9.4.1",
 		"webp-converter": "2.2.3",
 		"webpack": "^5.87.0",
-		"webpack-stream": "^7.0.0",
-		"wnumb": "^1.2.0"
+		"webpack-stream": "^7.0.0"
 	},
 	"name": "gulp-2023",
 	"version": "1.0.0",
@@ -47,5 +43,8 @@
 	},
 	"author": "Evgeny Ilyin",
 	"license": "ISC",
-	"description": ""
+	"description": "",
+	"dependencies": {
+		"@fancyapps/ui": "^5.0.20"
+	}
 }

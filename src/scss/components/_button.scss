@@ -1,7 +1,40 @@
 .btn {
+	text-decoration: none;
+	border: 1px solid $cyan;
+	background: $white;
+	white-space: nowrap;
+	line-height: 1;
+	transition: all $transition-default;
+
 	// .btn_default
 	&_default {
 		@include on-event {
+		}
+	}
+
+	// .btn_news
+	&_news {
+		color: $cyan;
+		border-color: $white;
+		background-color: transparent;
+
+		@include on-event {
+			color: $white;
+			border-color: $cyan;
+			background-color: $cyan;
+		}
+	}
+
+	// .btn_md
+	&_md {
+		font-size: rem(16);
+		font-weight: 300;
+		text-transform: uppercase;
+		padding: 13px 40px;
+
+		@include respond-to(md) {
+			font-size: rem(20);
+			padding: 17px 44px;
 		}
 	}
 }

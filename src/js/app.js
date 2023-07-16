@@ -8,8 +8,5 @@ functions.menuToggle();
 functions.marginAfterAbout();
 functions.accordionPerson();
 
-// import "./modules/cookies.js";
-// import "./modules/swiper.js";
-// import "./modules/fancybox.js";
-// import "./modules/lc_select.js";
-// import "./modules/nouislider.js";
+import "./modules/fancyapps.js";
+
