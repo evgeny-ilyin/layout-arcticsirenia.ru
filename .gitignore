@@ -1,9 +1,0 @@
-node_modules
-images_src
-build
-pdf
-.vscode
-.publish
-gulp/version.json
-package-lock.json
-*.zip
