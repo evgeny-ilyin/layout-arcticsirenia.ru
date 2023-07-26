@@ -1,0 +1,23 @@
+@@include('html/head.html', {
+	"title": "Новость"
+	})
+	<body>
+	
+		<div class="container container_header">
+			@@include('html/components/header-fixed.html', {})
+			@@include('html/header.html', {})
+		</div>
+	
+		<div class="container news-list">
+			@@include('html/news-list.html', {})
+		</div>
+		
+		<div class="container container_footer">
+			@@include('html/footer.html', {})
+		</div>
+	
+		@@include('html/svg-sprite.html', {})
+		@@include('html/scripts.html', {})
+	</body>
+	</html>
+	
