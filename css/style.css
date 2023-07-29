@@ -1478,9 +1478,11 @@ blockquote::before {
   display: flex;
   width: 100%
 }
-.summary {
-  position: relative;
+.no-webp .summary {
   background: #020b49 url(../img/bgr_about.png) 35% 280px no-repeat
+}
+.summary {
+  position: relative
 }
 .summary::before {
   z-index: 1;
@@ -1728,10 +1730,14 @@ blockquote::before {
   max-width: 460px
 }
 .info .info-population {
+  display: block;
   width: 175px;
   left: 15px;
   top: 120%;
-  margin-right: -8px
+  margin-right: -8px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%
 }
 .info .info-scull {
   position: absolute;
@@ -1857,7 +1863,12 @@ blockquote::before {
   margin-bottom: 30px
 }
 .portrait img {
-  width: 98px
+  display: block;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%
 }
 .portrait span {
   position: absolute;
@@ -2203,10 +2214,12 @@ blockquote::before {
 .article__quote {
   margin: 37px auto 40px
 }
+.no-webp .news-main {
+  background: #020b49 url(../img/bgr_about.png) left 35% bottom -1300px no-repeat
+}
 .news-main {
   position: relative;
-  padding: 97px 0 75px;
-  background: #020b49 url(../img/bgr_about.png) left 35% bottom -1300px no-repeat
+  padding: 97px 0 75px
 }
 .news-main::before {
   content: "";
@@ -3765,7 +3778,7 @@ input[type=checkbox]:disabled {
     padding-left: 115px
   }
   .person__photo {
-    max-width: 340px
+    max-width: 337px
   }
   .person__title {
     font-size: 1.25rem;
@@ -3881,4 +3894,10 @@ input[type=checkbox]:disabled {
     color: var(--f-button-hover-color);
     background-color: var(--f-button-hover-bg)
   }
+}
+.webp .summary {
+  background: #020b49 url(../img/bgr_about.webp) 35% 280px no-repeat
+}
+.webp .news-main {
+  background: #020b49 url(../img/bgr_about.webp) left 35% bottom -1300px no-repeat
 }
