@@ -14,6 +14,9 @@ global.app = {
 	plugins: plugins,
 };
 
+// Импорт конфига .env
+import "dotenv/config";
+
 // Импорт задач
 // import { vendors } from "./gulp/tasks/vendors.js";
 import { reset } from "./gulp/tasks/reset.js";

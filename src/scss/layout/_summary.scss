@@ -44,7 +44,7 @@
 
 	
 	@include respond-to(md) {
-		background-position: center 850px;
+		background-position: center 850px !important; // без important позиция переопределится в ".webp .summary"
 	}
 	
 	&::after {

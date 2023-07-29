@@ -2,6 +2,7 @@
 	"devDependencies": {
 		"browser-sync": "^2.29.3",
 		"del": "^7.0.0",
+		"dotenv": "^16.3.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-clean-css": "^4.3.0",
@@ -19,6 +20,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-svg-sprite": "^2.0.3",
+		"gulp-tinypng-compress": "^1.2.5",
 		"gulp-version-number": "^0.2.4",
 		"gulp-webp": "^4.0.1",
 		"gulp-webp-html-nosvg": "^1.1.1",

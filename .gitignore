@@ -1,6 +1,6 @@
+.env
 node_modules
 build
-src_images
 pdf
 .vscode
 gulp/version.json
