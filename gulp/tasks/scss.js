@@ -33,15 +33,13 @@ export const scss = () => {
 				})
 			)
 			.pipe(app.plugins.if(app.isBuild, groupCssMediaQueries())) //! карта некорректна с этим модулем, поэтому только для прода
-			// .pipe(																											//! isWebp() в /js/modules/functions.js
-			// 	app.plugins.if(
-			// 		app.isBuild,
-			// 		webpcss({
-			// 			webpClass: ".webp",
-			// 			noWebpClass: ".no-webp",
-			// 		})
-			// 	)
-			// )
+			.pipe(
+				//! isWebp() в /js/modules/functions.js
+				webpcss({
+					webpClass: ".webp",
+					noWebpClass: ".no-webp",
+				})
+			)
 			.pipe(
 				app.plugins.if(
 					app.isBuild,

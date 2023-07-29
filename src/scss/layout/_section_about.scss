@@ -330,10 +330,14 @@
 	}
 
 	.info-population {
+		display: block;
 		width: 175px;
 		left: 15px;
 		top: 120%;
 		margin-right: -8px;
+		object-fit: cover;
+    border-radius: 50%;
+
 
 		@include respond-to(md) {
 			margin-right: 0;
@@ -586,8 +590,13 @@
 	}
 
 	img {
-		width: 98px;
+		display: block;
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+    border-radius: 50%;
 	}
+
 	span {
 		position: absolute;
 		top: 100%;

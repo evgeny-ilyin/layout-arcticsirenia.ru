@@ -1,0 +1,30 @@
+.f-carousel {
+	--f-carousel-theme-color: #{$cyan};
+	--f-carousel-dot-color: transparent;
+	--f-carousel-dot-opacity: 1;
+	--f-carousel-dot-hover-opacity: 1;
+	--f-carousel-dots-height: -22px;
+	--f-button-svg-width: 31px;
+	--f-button-svg-height: 31px;
+	--f-button-hover-color: #{$red};
+	--f-button-next-pos: -45px;
+	--f-button-prev-pos: -45px;
+}
+
+.f-carousel__dot {
+	border: 1px solid $red;
+}
+
+.f-carousel__dots li.is-current {
+	.f-carousel__dot {
+		background-color: $red;
+	}
+}
+
+.f-carousel__slide {
+	img {
+		// max-height: 463px;
+		// object-fit: contain;
+    margin: 0 auto !important;
+	}
+}

@@ -87,7 +87,9 @@ export function menuToggle() {
 }
 
 export function marginAfterAbout() {
-	const stepsH = document.querySelector(".info_block7").offsetHeight,
+	const steps = document.querySelector(".info_block7");
+	if (!steps) return;
+	const stepsH = steps.offsetHeight,
 		sectionNext = document.querySelector(".summary + div");
 	sectionNext.style.marginTop = `${stepsH - 165 - 74}px`;
 
@@ -96,6 +98,7 @@ export function marginAfterAbout() {
 
 export function accordionPerson() {
 	const buttons = document.querySelectorAll(".accordion-person");
+	if (!buttons) return;
 	buttons.forEach((button) => {
 		button.addEventListener("click", () => {
 			let photo = button.closest(".person").querySelector(".person__photo");
@@ -113,11 +116,12 @@ export function accordionPerson() {
 
 export function cowHeight() {
 	let setHeight = () => {
-		const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height,
+		const cow = document.querySelector(".parallax-cow");
+		if (!cow) return;
+		const cowH = cow.getBoundingClientRect().height,
 			sectionNext = document.querySelector(".stellers-cow");
 		sectionNext.style.height = `${cowH}px`;
 	};
-
 	window.addEventListener("load", setHeight);
 	window.addEventListener("resize", setHeight);
 }
@@ -143,18 +147,20 @@ export function cowHeight() {
 } */
 
 export function moooo() {
-	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
+	const cow = document.querySelector(".parallax-cow");
+	if (!cow) return;
+	const cowH = cow.getBoundingClientRect().height;
 	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
 	const stopMove = document.querySelector(".info_block7").offsetTop;
 
 	if (startMove < 0) {
 		if (window.scrollY >= stopMove) {
-			document.querySelector(".parallax-cow").style.top = `${stopMove - cowH}px`;
+			cow.style.top = `${stopMove - cowH}px`;
 		} else {
-			document.querySelector(".parallax-cow").style.top = `${window.scrollY - cowH}px`;
+			cow.style.top = `${window.scrollY - cowH}px`;
 		}
 	} else {
-		document.querySelector(".parallax-cow").style.top = 0;
+		cow.style.top = 0;
 	}
 
 	window.addEventListener("load", moooo);

@@ -55,3 +55,15 @@
 		}
 	}
 }
+
+blockquote {
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		width: 35px;
+		height: 27px;
+		background: url($arrow-double) 0 0 / contain no-repeat;
+	}
+}

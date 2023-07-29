@@ -33,6 +33,7 @@ export const html = () => {
 				)
 			)
 
+			.pipe(webpHtmlNosvg())
 			// .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
 
 			.pipe(

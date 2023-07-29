@@ -8,7 +8,9 @@
 // 2. Vendors
 @import "vendors/normalize";
 @import "vendors/reset";
-@import "~@fancyapps/ui/dist/fancybox/fancybox";
+// @import "~@fancyapps/ui/dist/fancybox/fancybox";
+@import "~@fancyapps/ui/dist/carousel/carousel";
+@import "abstracts/fancyapps-vars-overrides";
 
 // 3. Base stuff
 @import "base/base";
@@ -28,6 +30,7 @@
 @import "layout/news-main";
 @import "layout/news-list";
 @import "layout/news-item";
+@import "layout/news-element";
 @import "layout/publications";
 @import "layout/footer";
 
