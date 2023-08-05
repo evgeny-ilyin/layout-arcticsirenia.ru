@@ -8,7 +8,7 @@
 // 2. Vendors
 @import "vendors/normalize";
 @import "vendors/reset";
-// @import "~@fancyapps/ui/dist/fancybox/fancybox";
+@import "~@fancyapps/ui/dist/fancybox/fancybox";
 @import "~@fancyapps/ui/dist/carousel/carousel";
 @import "abstracts/fancyapps-vars-overrides";
 
@@ -41,6 +41,7 @@
 @import "components/quote";
 @import "components/button";
 @import "components/pagination";
+@import "components/modal";
 
 @import "components/form";
 @import "components/checkbox";

@@ -50,18 +50,6 @@
 				margin: 33px 0 33px 120px;
 			}
 		}
-
-		blockquote {
-			width: 85%;
-			margin-left: auto;
-			margin-right: auto;
-			font-size: rem(18);
-
-			@include respond-to(lgx) {
-				font-size: rem(20);
-				margin-left: 200px;
-			}
-		}
 	}
 
 	// .news__carousel
@@ -76,14 +64,4 @@
 			margin: 0;
 		}
 	}
-}
-
-blockquote {
-	position: relative;
-	padding-left: 38px;
-	max-width: 500px;
-	margin: 40px 0;
-	font-size: rem(20);
-	line-height: 1.2;
-	color: $brand-color-primary;
 }

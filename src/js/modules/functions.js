@@ -126,26 +126,6 @@ export function cowHeight() {
 	window.addEventListener("resize", setHeight);
 }
 
-/* export function moooo() {
-	const cowH = document.querySelector(".parallax-cow").getBoundingClientRect().height;
-	const startMove = document.querySelector(".content.about").getBoundingClientRect().top; //viewport
-	const stopMove = document.querySelector(".info_block7").offsetTop;
-	// const viewportH = window.visualViewport.height;
-
-	if (startMove < 0) {
-		if (window.scrollY >= stopMove) {
-			document.body.style.cssText = `--scrollTop: ${stopMove - cowH}px`;
-		} else {
-			document.body.style.cssText = `--scrollTop: ${window.scrollY - cowH}px`;
-		}
-	} else {
-		document.body.style.cssText = `--scrollTop: 0`;
-	}
-
-	window.addEventListener("load", moooo);
-	window.addEventListener("scroll", moooo);
-} */
-
 export function moooo() {
 	const cow = document.querySelector(".parallax-cow");
 	if (!cow) return;

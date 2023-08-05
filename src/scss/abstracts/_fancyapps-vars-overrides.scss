@@ -1,3 +1,4 @@
+// carousel overrides
 .f-carousel {
 	--f-carousel-theme-color: #{$cyan};
 	--f-carousel-dot-color: transparent;
@@ -9,6 +10,12 @@
 	--f-button-hover-color: #{$red};
 	--f-button-next-pos: -45px;
 	--f-button-prev-pos: -45px;
+}
+
+// элементы управления карусели в модальных окнах расположены внутри слайда
+.modal_carousel .f-carousel {
+	--f-button-next-pos: 10px;
+	--f-button-prev-pos: 10px;
 }
 
 .f-carousel__dot {
@@ -23,8 +30,28 @@
 
 .f-carousel__slide {
 	img {
-		// max-height: 463px;
-		// object-fit: contain;
-    margin: 0 auto !important;
+		margin: 0 auto !important;
 	}
+}
+
+// fancybox overrides
+.fancybox__container {
+	--fancybox-bg: rgba(39, 39, 41, 0.9);
+	--fancybox-color: #{$cyan};
+	--fancybox-hover-color: #{$red};
+}
+
+.fancybox__caption {
+	max-width: 80%;
+}
+.is-compact .fancybox__content > .f-button.is-close-btn,
+.fancybox__content > .f-button.is-close-btn {
+	--f-button-color: #{$red};
+	--f-button-hover-color: #{$hover-red};
+	--f-button-svg-width: 30px;
+	--f-button-svg-height: 30px;
+	--f-button-bg: transparent;
+	top: 15px;
+	right: 18px;
+	opacity: 1;
 }

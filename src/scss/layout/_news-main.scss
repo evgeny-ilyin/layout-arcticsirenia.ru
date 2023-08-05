@@ -48,12 +48,12 @@
 	&__gallery-link {
 		display: inline-flex;
 		align-items: center;
-		color: $cyan;
+		color: $cyan !important;
 		text-transform: uppercase;
 		text-decoration: none;
 
-		@include on-event {
-			color: $white;
+		@include on-event('hover') {
+			color: $white !important;
 
 			.news-main__gallery-image {
 				transform: scale(1.2);

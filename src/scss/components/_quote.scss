@@ -1,6 +1,5 @@
 .quote {
 	display: flex;
-	// position: relative;
 	width: 100%;
 	max-width: 250px;
 
@@ -69,16 +68,71 @@
 		font-size: rem(12);
 		line-height: 1.2;
 
-		// @include when-inside(".article__quote") {
-		// 	font-size: rem(12);
-		// }
-
 		@include respond-to(md) {
 			font-size: rem(16);
 		}
 
 		@include respond-to(xl) {
 			font-size: rem(20);
+		}
+	}
+}
+
+// Упрощённые цитаты для текстов, новостей и модальных окон. С указанием автора внизу.
+// figure>blockquote+figcaption
+figure {
+	position: relative;
+	width: 85%;
+	max-width: 500px;
+	padding-left: 38px;
+	margin: 40px auto;
+
+	@include when-inside(".news__detail") {
+		@include respond-to(lgx) {
+			margin-left: 200px;
+		}
+	}
+
+	@include when-inside(".modal__text") {
+		width: 100%;
+		max-width: 100%;
+		padding-left: 0;
+		margin: 20px 0 27px;
+	}
+
+	blockquote {
+		color: $brand-color-primary;
+		font-size: rem(16);
+		line-height: 1.2;
+
+		@include respond-to(md) {
+			font-size: rem(18);
+		}
+
+		@include when-inside(".news__detail") {
+			@include respond-to(lgx) {
+				font-size: rem(20);
+			}
+		}
+
+		@include when-inside(".modal__text") {
+			color: $cyan;
+			&::before {
+				left: -38px;
+			}
+		}
+	}
+
+	figcaption {
+		margin-top: 12px;
+		font-size: rem(14);
+
+		@include when-inside(".modal__text") {
+			font-size: rem(12);
+		}
+
+		&::before {
+			content: "— ";
 		}
 	}
 }
