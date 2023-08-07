@@ -19,6 +19,12 @@
 		transform: rotate(45deg);
 	}
 
+	// .arrow_disabled
+	&_disabled {
+		opacity: 0.5;
+		cursor: default;
+	}
+
 	// .arrow_next
 	&_next {
 		&::after,
