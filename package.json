@@ -32,7 +32,7 @@
 		"webpack": "^5.87.0",
 		"webpack-stream": "^7.0.0"
 	},
-	"name": "gulp-2023",
+	"name": "arcticsirenia.ru",
 	"version": "1.0.0",
 	"main": "gulpfile.js",
 	"type": "module",
