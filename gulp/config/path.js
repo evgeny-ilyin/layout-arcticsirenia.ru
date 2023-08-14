@@ -10,7 +10,7 @@ export const path = {
 		html: `${srcFolder}/*.html`,
 		scss: `${srcFolder}/scss/style.scss`,
 		js: `${srcFolder}/js/app.js`,
-		img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif}`,
+		img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,mp4}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		svgspriteIn: `${srcFolder}/svgsprite/*.svg`,
 		svgspriteOut: `${srcFolder}/html/`,
