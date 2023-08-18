@@ -76,7 +76,7 @@ function menuToggle() {
 		social.style.opacity = 0;
 		logo.style.opacity = 0;
 		setTimeout(() => {
-			headerFixed.classList.add("noborder");
+			headerFixed.classList.add("header_noborder");
 		}, 300);
 	} else {
 		// скрыть меню
@@ -84,7 +84,7 @@ function menuToggle() {
 		social.style.opacity = 1;
 		logo.style.opacity = 1;
 		setTimeout(() => {
-			headerFixed.classList.remove("noborder");
+			headerFixed.classList.remove("header_noborder");
 		}, 200);
 	}
 

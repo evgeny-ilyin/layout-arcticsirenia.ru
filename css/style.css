@@ -2891,7 +2891,7 @@ blockquote::before {
   border-bottom: 1px solid #2862db
 }
 .header_show {
-  top: 74px
+  top: 73px
 }
 .header_fixed {
   z-index: 11;
@@ -2901,6 +2901,10 @@ blockquote::before {
   width: 100%;
   min-width: 320px;
   border-bottom: 1px solid #2862db
+}
+.header_noborder {
+  border: 0;
+  height: 73px
 }
 .header__wrapper {
   display: -webkit-box;
@@ -3255,6 +3259,23 @@ blockquote::before {
   -webkit-transform: translateX(14px);
   -ms-transform: translateX(14px);
   transform: translateX(14px)
+}
+.delimeter_arrow::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #20c9cb;
+  border-left: 2px solid #20c9cb;
+  border-top: 0;
+  width: 19px;
+  height: 19px;
+  right: -37px;
+  top: -17px;
+  -webkit-transform: rotate(-45deg)!important;
+  -ms-transform: rotate(-45deg)!important;
+  transform: rotate(-45deg)!important
+}
+.delimeter_arrow::before {
+  display: none
 }
 .portraits {
   display: -webkit-box;
@@ -4054,16 +4075,16 @@ blockquote::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 22px;
+  height: 21px;
   width: 27px;
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
 }
 .hamburger-inner,
 .hamburger-inner::after,
@@ -4092,8 +4113,6 @@ blockquote::before {
   content: ""
 }
 .hamburger-inner {
-  top: 50%;
-  margin-top: -1px;
   -webkit-transition-timing-function: cubic-bezier(.55,.055,.675,.19);
   -o-transition-timing-function: cubic-bezier(.55,.055,.675,.19);
   transition-timing-function: cubic-bezier(.55,.055,.675,.19);
