@@ -3275,7 +3275,7 @@ blockquote::before {
   transform: rotate(-45deg)!important
 }
 .delimeter_arrow::before {
-  display: none
+  display: none!important
 }
 .portraits {
   display: -webkit-box;
