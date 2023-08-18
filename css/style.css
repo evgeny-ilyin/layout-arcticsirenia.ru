@@ -5082,9 +5082,6 @@ input[type=checkbox]:disabled {
   .delimeter::before {
     display: inline
   }
-  .delimeter_arrow::after {
-    display: block
-  }
   .area__quote {
     padding: 78px 75px 54px 85px
   }
