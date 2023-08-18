@@ -3262,7 +3262,6 @@ blockquote::before {
 }
 .delimeter_arrow::after {
   content: "";
-  display: block;
   width: 19px;
   height: 19px;
   right: -37px;
@@ -5082,6 +5081,9 @@ input[type=checkbox]:disabled {
   .delimeter::after,
   .delimeter::before {
     display: inline
+  }
+  .delimeter_arrow::after {
+    display: block
   }
   .area__quote {
     padding: 78px 75px 54px 85px
