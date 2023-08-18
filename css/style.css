@@ -3263,16 +3263,15 @@ blockquote::before {
 .delimeter_arrow::after {
   content: "";
   display: block;
-  border-bottom: 2px solid #20c9cb;
-  border-left: 2px solid #20c9cb;
-  border-top: 0;
   width: 19px;
   height: 19px;
   right: -37px;
   top: -17px;
-  -webkit-transform: rotate(-45deg)!important;
-  -ms-transform: rotate(-45deg)!important;
-  transform: rotate(-45deg)!important
+  border-top: 2px solid #20c9cb;
+  border-left: 2px solid #20c9cb;
+  -webkit-transform: rotate(225deg)!important;
+  -ms-transform: rotate(225deg)!important;
+  transform: rotate(225deg)!important
 }
 .delimeter_arrow::before {
   display: none!important
