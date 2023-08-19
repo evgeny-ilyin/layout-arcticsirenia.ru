@@ -4502,12 +4502,10 @@ figure figcaption::before {
   margin: 16px 0
 }
 .modal__text a {
-  color: #20c9cb
+  color: #20c9cb!important
 }
-.modal__text a:active,
-.modal__text a:focus,
 .modal__text a:hover {
-  color: #ff1f1f
+  color: #ff1f1f!important
 }
 .modal__image {
   height: 100%;
