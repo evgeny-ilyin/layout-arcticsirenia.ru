@@ -20,7 +20,11 @@ export const img = () => {
 			.pipe(webp({ quality: 70 }))
 			.pipe(app.gulp.dest(app.path.build.img))
 
-			// оптимизировать картинки tinypng (прод)
+			// перенести все картинки без оптимизации (dev), чтобы работал лайтбокс Fancybox по ссылке на картинку (без замены на picture и webp)
+			.pipe(app.plugins.if(!app.isBuild, app.gulp.src(app.path.src.img)))
+			.pipe(app.plugins.if(!app.isBuild, app.gulp.dest(app.path.build.img)))
+
+			// оптимизировать картинки tinypng (prod) с лимитом 500 изображений в месяц
 			.pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img)))
 			.pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
 			// .pipe(
@@ -33,7 +37,7 @@ export const img = () => {
 			// )
 			.pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.img)))
 
-			// вместо imagemin используем tinypng с лимитом 500 изображений в месяц
+			// imagemin (переключено на tinypng выше)
 			// .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img)))
 			// .pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
 			// .pipe(

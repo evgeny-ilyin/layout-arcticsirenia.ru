@@ -613,6 +613,7 @@
 		height: 100px;
 		object-fit: cover;
 		border-radius: 50%;
+		transition: all $transition-default;
 	}
 
 	span {
@@ -626,6 +627,14 @@
 
 		@include respond-to(md) {
 			// font-size: rem(12);
+		}
+	}
+}
+
+.lightbox-zoom {
+	@include on-event("hover") { 
+		img {
+			transform: scale(1.06);
 		}
 	}
 }

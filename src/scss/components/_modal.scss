@@ -103,11 +103,11 @@
 			margin: 16px 0;
 		}
 
-		a:link {
-			color: $cyan;
+		a {
+			color: $cyan !important;
 
-			@include on-event {
-				color: $href-color-hover;
+			@include on-event("hover") {
+				color: $href-color-hover !important;
 			}
 		}
 	}
