@@ -18,7 +18,7 @@
 
 	// .header_show
 	&_show {
-		top: 74px;
+		top: 73px;
 	}
 
 	// .header_fixed
@@ -31,6 +31,12 @@
 		width: 100%;
 		min-width: 320px;
 		border-bottom: 1px solid $brand-color-primary;
+	}
+
+	// .header_noborder
+	&_noborder {
+		border: 0;
+		height: 73px;
 	}
 
 	// .header__wrapper

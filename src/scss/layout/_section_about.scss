@@ -546,6 +546,7 @@
 		border-left: 2px solid $cyan;
 		transition: all $transition-default;
 	}
+
 	&::after {
 		content: "";
 		position: absolute;
@@ -563,6 +564,23 @@
 		}
 		&::after {
 			transform: translateX(14px);
+		}
+	}
+
+	// .delimeter_arrow
+	&_arrow {
+		&::after {
+			content: "";
+			width: 19px;
+			height: 19px;
+			right: -37px;
+			top: -17px;
+			border-top: 2px solid $cyan;
+			border-left: 2px solid $cyan;
+			transform: rotate(225deg) !important;
+		}
+		&::before {
+			display: none !important;
 		}
 	}
 }

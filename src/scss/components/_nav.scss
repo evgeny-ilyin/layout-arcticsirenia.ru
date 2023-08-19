@@ -136,7 +136,7 @@
 	margin-left: 19px;
 	cursor: pointer;
 	display: flex;
-	height: 22px;
+	height: 21px;
 	width: 27px;
 	position: relative;
 	// position: absolute;
@@ -145,7 +145,7 @@
 	// transform: translateY(-50%);
 	// z-index: 2;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 
 	// @include respond-to(md) {
 	// 	display: none;
@@ -173,8 +173,6 @@
 }
 
 .hamburger-inner {
-	top: 50%;
-	margin-top: -1px;
 	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 	transition-duration: 75ms;
 }

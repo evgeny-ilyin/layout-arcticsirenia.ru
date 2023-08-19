@@ -23,14 +23,14 @@ export const img = () => {
 			// оптимизировать картинки tinypng (прод)
 			.pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.img)))
 			.pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.img)))
-			.pipe(
-				app.plugins.if(
-					app.isBuild,
-					tinypng({
-						key: process.env.KEY_TINYPNG,
-					})
-				)
-			)
+			// .pipe(
+			// 	app.plugins.if(
+			// 		app.isBuild,
+			// 		tinypng({
+			// 			key: process.env.KEY_TINYPNG,
+			// 		})
+			// 	)
+			// )
 			.pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.img)))
 
 			// вместо imagemin используем tinypng с лимитом 500 изображений в месяц
