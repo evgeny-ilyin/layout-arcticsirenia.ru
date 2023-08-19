@@ -83,7 +83,9 @@ select {
 [type=reset],
 [type=submit],
 button {
-  -webkit-appearance: button
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button
 }
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -128,6 +130,8 @@ textarea {
 }
 [type=search] {
   -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px
 }
 [type=search]::-webkit-search-decoration {
@@ -4497,12 +4501,12 @@ figure figcaption::before {
 .modal__text p {
   margin: 16px 0
 }
-.modal__text a:link {
+.modal__text a {
   color: #20c9cb
 }
-.modal__text a:link:active,
-.modal__text a:link:focus,
-.modal__text a:link:hover {
+.modal__text a:active,
+.modal__text a:focus,
+.modal__text a:hover {
   color: #ff1f1f
 }
 .modal__image {
