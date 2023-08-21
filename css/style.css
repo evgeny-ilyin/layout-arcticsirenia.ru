@@ -3195,15 +3195,16 @@ blockquote::before {
   margin: 0 auto;
   width: 72%
 }
+.parallax-cow__note {
+  display: none;
+  color: #fff
+}
 .stellers-cow {
   height: 583px;
   color: #fff;
   position: relative;
   z-index: 3;
   margin-top: -140px
-}
-.stellers-cow__note {
-  display: none
 }
 .stellers-cow__info {
   position: absolute;
@@ -3214,9 +3215,10 @@ blockquote::before {
   line-height: 1.2;
   margin-top: 90px
 }
-.stellers-cow__info strong {
+.stellers-cow__header {
   display: block;
-  margin-bottom: 35px
+  margin-bottom: 35px;
+  font-weight: 700
 }
 .delimeter {
   width: 100%;
@@ -4473,7 +4475,7 @@ figure figcaption::before {
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0 16px 0 50px;
-  font-size: .875rem;
+  font-size: 1rem;
   scrollbar-width: thin;
   scrollbar-color: #bf4848 #333
 }
@@ -4798,15 +4800,15 @@ input[type=checkbox]:disabled {
   .parallax-cow__image {
     display: block
   }
-  .stellers-cow {
-    display: block
-  }
-  .stellers-cow__note {
+  .parallax-cow__note {
     display: block;
     position: absolute;
     width: 140px;
     left: 45%;
-    bottom: -55px
+    bottom: 20px
+  }
+  .stellers-cow {
+    display: block
   }
   .stellers-cow__info {
     margin-top: 0;
@@ -5081,9 +5083,8 @@ input[type=checkbox]:disabled {
     top: 25px;
     margin-top: 0
   }
-  .stellers-cow__note {
-    left: 52%;
-    bottom: 0
+  .parallax-cow__note {
+    bottom: 60px
   }
   .delimeter {
     border-bottom: 2px solid #fff
@@ -5153,6 +5154,9 @@ input[type=checkbox]:disabled {
   }
 }
 @media (min-width:1200px) {
+  .parallax-cow__note {
+    bottom: 80px
+  }
   .steps {
     margin-top: 68px
   }
@@ -5292,16 +5296,18 @@ input[type=checkbox]:disabled {
     width: auto;
     max-width: none
   }
+  .parallax-cow__note {
+    width: 150px;
+    bottom: 160px
+  }
   .stellers-cow {
     margin-top: -160px
   }
-  .stellers-cow__note {
-    width: 150px;
-    bottom: 165px
-  }
   .stellers-cow__info {
     top: 38%;
-    left: 73%;
+    left: 73%
+  }
+  .stellers-cow__header {
     font-size: 1.125rem
   }
   .area__legend {
