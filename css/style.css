@@ -3940,6 +3940,9 @@ blockquote::before {
   break-inside: avoid-column;
   margin-bottom: 15px
 }
+.publications__list a {
+  word-break: break-word
+}
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
