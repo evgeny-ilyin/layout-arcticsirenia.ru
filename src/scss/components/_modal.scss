@@ -60,7 +60,7 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 		padding: 0 16px 0 50px;
-		font-size: rem(14);
+		font-size: rem(16);
 
 		@include respond-to(md) {
 			padding-left: 80px;
