@@ -40,9 +40,14 @@
 
 			img {
 				margin-left: 0;
+				height: 100%;
 			}
 		}
 
+		&>img {
+			height: 100%;
+		}
+		
 		img {
 			margin: 33px 0;
 
