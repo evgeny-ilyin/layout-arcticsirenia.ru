@@ -11,6 +11,7 @@
 @import "~@fancyapps/ui/dist/fancybox/fancybox";
 @import "~@fancyapps/ui/dist/carousel/carousel";
 @import "abstracts/fancyapps-vars-overrides";
+@import "~@splidejs/splide/dist/css/splide.min";
 
 // 3. Base stuff
 @import "base/base";
@@ -26,6 +27,7 @@
 @import "layout/summary";
 @import "layout/section_goal";
 @import "layout/section_about";
+@import "layout/expedition";
 @import "layout/team";
 @import "layout/news-main";
 @import "layout/news-list";

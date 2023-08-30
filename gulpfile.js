@@ -44,7 +44,7 @@ const mainTasks = gulp.parallel(html, scss, js, img);
 // const mainTasks = gulp.parallel(vendors, html, scss, js, img);
 
 // Построение сценариев выполнения задач
-const dev = gulp.series(reset, svgsprite, mainTasks, index, gulp.parallel(watcher, server));
+const dev = gulp.series(svgsprite, mainTasks, index, gulp.parallel(watcher, server));
 const build = gulp.series(reset, svgsprite, mainTasks, index);
 const deploy_ghPages = gulp.series(reset, svgsprite, mainTasks, index, deploy);
 const make_zip = gulp.series(reset, svgsprite, mainTasks, index, zip);
