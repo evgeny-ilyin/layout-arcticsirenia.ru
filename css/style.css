@@ -4416,6 +4416,7 @@ blockquote::before {
   margin-bottom: 15px
 }
 .publications__list a {
+  display: block;
   word-break: break-word
 }
 .footer {
