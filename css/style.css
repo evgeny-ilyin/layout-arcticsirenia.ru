@@ -2958,13 +2958,27 @@ a:focus,
 a:hover {
   color: #ff1f1f
 }
+.load-more-wrap .load-more-href {
+  color: #2862db;
+  text-decoration: none;
+  border-bottom: 1px solid #2862db
+}
+.load-more-wrap .load-more-href:active,
+.load-more-wrap .load-more-href:focus,
+.load-more-wrap .load-more-href:hover {
+  color: #ff1f1f;
+  border-bottom-color: #ff1f1f
+}
+.load-more-wrap .load-more-href {
+  border-bottom-style: dashed
+}
 .slider h4 {
   color: #2862db
 }
 a {
-  -webkit-transition: color .2s ease-in-out,background .2s ease-in-out;
-  -o-transition: color .2s ease-in-out,background .2s ease-in-out;
-  transition: color .2s ease-in-out,background .2s ease-in-out
+  -webkit-transition: color .2s ease-in-out,background .2s ease-in-out,border .2s ease-in-out;
+  -o-transition: color .2s ease-in-out,background .2s ease-in-out,border .2s ease-in-out;
+  transition: color .2s ease-in-out,background .2s ease-in-out,border .2s ease-in-out
 }
 p {
   line-height: 1.4;
@@ -3122,6 +3136,13 @@ strong {
   to {
     opacity: 1
   }
+}
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis
 }
 .icon-arrow-quote {
   width: 25px;
@@ -4415,9 +4436,63 @@ blockquote::before {
   break-inside: avoid-column;
   margin-bottom: 15px
 }
+.publications__list ol {
+  list-style: decimal;
+  padding-left: 20px
+}
 .publications__list a {
   display: block;
   word-break: break-word
+}
+.load-more-wrap {
+  font-size: 1.125rem;
+  margin: 50px 0 0;
+  text-align: center;
+  height: 24px
+}
+.is-loading {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 24px;
+  border: 0!important
+}
+.is-loading::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23ff5252' fill-rule='evenodd'%3E%3Cpath fill-rule='nonzero' d='M16 32a16 16 0 1 1 0-32 16 16 0 0 1 0 32zm0-2a14 14 0 1 0 0-28 14 14 0 0 0 0 28z' opacity='.1'/%3E%3Cpath d='M16 2V0A16 16 0 0 0 0 16h2A14 14 0 0 1 16 2z'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  -webkit-animation: fetchRingRotate 1s infinite linear;
+  animation: fetchRingRotate 1s infinite linear
+}
+@-webkit-keyframes fetchRingRotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+@keyframes fetchRingRotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
 }
 .footer {
   display: -webkit-box;
@@ -4823,6 +4898,7 @@ figure figcaption::before {
   content: "— "
 }
 .btn {
+  cursor: pointer;
   text-decoration: none;
   border: 1px solid #20c9cb;
   background: #fff;
