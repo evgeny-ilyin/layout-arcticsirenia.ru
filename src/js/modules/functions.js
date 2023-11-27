@@ -146,3 +146,57 @@ export function moooo() {
 	window.addEventListener("load", moooo);
 	window.addEventListener("scroll", moooo);
 }
+
+export function loadmore() {
+	let fetchByUrl = async (trigger) => {
+		const target = trigger.dataset.target,
+			url = trigger.dataset.url;
+
+		if (!url || !target) return;
+
+		const targetNode = document.querySelector(`.${target}`);
+
+		trigger.innerHTML = "";
+		btnLoader(trigger, "start");
+
+		try {
+			let response = await fetch(url);
+			if (!response.ok) {
+				return;
+			}
+			let result = await response.text(),
+				div = document.createElement("div");
+			div.innerHTML = result;
+
+			let newPager = div.querySelector(".load-more-wrap"),
+				oldPager = document.querySelector(".load-more-wrap");
+
+			oldPager.innerHTML = newPager.innerHTML;
+			newPager.remove();
+
+			targetNode.insertAdjacentHTML("beforeend", div.innerHTML);
+		} catch (e) {
+			console.log(e);
+			return;
+		}
+	};
+
+	document.addEventListener("click", (e) => {
+		const el = e.target.closest(".js-load-more");
+		if (el) {
+			fetchByUrl(el);
+		}
+	});
+}
+
+function btnLoader(where, action = false) {
+	if (!where) return;
+	const loadingClass = "is-loading";
+
+	if (action == "stop") {
+		where.classList.remove(loadingClass);
+		return;
+	}
+
+	where.classList.add(loadingClass);
+}

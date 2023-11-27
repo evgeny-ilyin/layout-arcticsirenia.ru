@@ -1,0 +1,39 @@
+.load-more-wrap {
+	font-size: rem(18);
+	margin: 50px 0 0;
+	text-align: center;
+	height: 24px;
+
+	.load-more-href {
+		@extend %text-links-dashed;
+	}
+}
+
+// loader
+.is-loading {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 24px;
+	border: 0 !important;
+
+	&::before {
+		position: absolute;
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='%23#{$red-svg}' fill-rule='evenodd'%3E%3Cpath fill-rule='nonzero' d='M16 32a16 16 0 1 1 0-32 16 16 0 0 1 0 32zm0-2a14 14 0 1 0 0-28 14 14 0 0 0 0 28z' opacity='.1'/%3E%3Cpath d='M16 2V0A16 16 0 0 0 0 16h2A14 14 0 0 1 16 2z'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+		animation: fetchRingRotate 1s infinite linear;
+	}
+}
+
+@keyframes fetchRingRotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

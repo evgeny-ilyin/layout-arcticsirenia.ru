@@ -10,4 +10,5 @@ addEventListener("DOMContentLoaded", () => {
 	functions.menuToggle();
 	functions.marginAfterAbout();
 	functions.accordionPerson();
+	functions.loadmore();
 });

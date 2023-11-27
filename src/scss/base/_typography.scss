@@ -120,20 +120,21 @@ body {
 	}
 }
 
-// %text-links-solid {
-// 	color: $href-color;
-// 	text-decoration: none;
-// 	border-bottom: 1px solid $href-color;
+%text-links-solid {
+	color: $href-color;
+	text-decoration: none;
+	border-bottom: 1px solid $href-color;
 
-// 	@include on-event {
-// 		border-bottom-color: transparent;
-// 	}
-// }
+	@include on-event {
+		color: $href-color-hover;
+		border-bottom-color: $href-color-hover;
+	}
+}
 
-// %text-links-dashed {
-// 	@extend %text-links-solid;
-// 	border-bottom-style: dashed;
-// }
+%text-links-dashed {
+	@extend %text-links-solid;
+	border-bottom-style: dashed;
+}
 
 /**
  * Text others
@@ -168,7 +169,7 @@ h6 {
 
 a {
 	@extend %text-links;
-	transition: color $transition-default, background $transition-default;
+	transition: color $transition-default, background $transition-default, border $transition-default;
 }
 
 p {
