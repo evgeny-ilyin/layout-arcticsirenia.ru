@@ -4758,7 +4758,6 @@ blockquote::before {
   transition: all .2s ease-in-out
 }
 .lang {
-  opacity: 0!important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6066,7 +6065,7 @@ input[type=checkbox]:disabled {
     font-size: .8125rem
   }
   .quote {
-    width: 60%;
+    width: 57.5%;
     max-width: none
   }
   .quote__vertical {
