@@ -4899,6 +4899,7 @@ figure figcaption::before {
 .btn {
   cursor: pointer;
   text-decoration: none;
+  padding: 8px 16px;
   border: 1px solid #20c9cb;
   background: #fff;
   white-space: nowrap;
@@ -4906,6 +4907,16 @@ figure figcaption::before {
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out
+}
+.btn_accept {
+  border: none;
+  color: #fff;
+  background: #ff5252
+}
+.btn_accept:active,
+.btn_accept:focus,
+.btn_accept:hover {
+  background: #ff1f1f
 }
 .btn_news {
   color: #20c9cb;
@@ -5170,6 +5181,56 @@ input[type=checkbox]:disabled {
   display: block;
   width: 0;
   height: 0
+}
+:root {
+  --cookie-font-family: inherit;
+  --cookie-bg: rgba(255, 255, 255, 0.6);
+  --cookie-shadow: rgba(0, 0, 0, 0.1)
+}
+.c-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 400px;
+  background-color: var(--cookie-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 16px;
+  -webkit-box-shadow: 0 2px 8px var(--cookie-shadow);
+  box-shadow: 0 2px 8px var(--cookie-shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 10px;
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
+  opacity: 0;
+  -webkit-transition: opacity .4s ease,-webkit-transform .4s ease;
+  transition: opacity .4s ease,-webkit-transform .4s ease;
+  -o-transition: transform .4s ease,opacity .4s ease;
+  transition: transform .4s ease,opacity .4s ease;
+  transition: transform .4s ease,opacity .4s ease,-webkit-transform .4s ease;
+  z-index: -1
+}
+.c-popup p {
+  margin-bottom: 5px
+}
+.c-popup.show {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 1000
 }
 @media (min-width:375px) {
   .team {
