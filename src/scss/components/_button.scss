@@ -1,15 +1,21 @@
 .btn {
 	cursor: pointer;
 	text-decoration: none;
+	padding: 8px 16px;
 	border: 1px solid $cyan;
 	background: $white;
 	white-space: nowrap;
 	line-height: 1;
 	transition: all $transition-default;
 
-	// .btn_default
-	&_default {
+	// .btn_accept
+	&_accept {
+		border: none;
+		color: $white;
+		background: $red;
+
 		@include on-event {
+			background: $hover-red;
 		}
 	}
 

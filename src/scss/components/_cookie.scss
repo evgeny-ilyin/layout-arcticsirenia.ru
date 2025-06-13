@@ -1,0 +1,48 @@
+:root {
+	--cookie-font-family: inherit;
+	--cookie-bg: rgba(255, 255, 255, 0.6);
+	// --cookie-border: #ccc;
+	--cookie-shadow: rgba(0, 0, 0, 0.1);
+	// --cookie-box-text: #000;
+	// --cookie-box-font-size: 1rem;
+	// --cookie-button-bg: #007bff;
+	// --cookie-button-bg-hover: #0056b3;
+	// --cookie-button-text: #fff;
+	// --cookie-button-font-size: 1rem;
+}
+
+.c-popup {
+	// font-family: var(--cookie-font-family);
+	// font-size: var(--cookie-box-font-size);
+	// line-height: 1.3;
+	// color: var(--cookie-box-text);
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	max-width: 400px;
+	background-color: var(--cookie-bg);
+	backdrop-filter: blur(10px);
+	// border: 1px solid var(--cookie-border);
+	border-radius: 8px;
+	padding: 16px;
+	box-shadow: 0 2px 8px var(--cookie-shadow);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	transform: translateY(100vh);
+	opacity: 0;
+	transition: transform 0.4s ease, opacity 0.4s ease;
+	z-index: -1;
+
+	p {
+		margin-bottom: 5px;
+	}
+}
+
+.c-popup.show {
+	transform: translateY(0);
+	opacity: 1;
+	z-index: 1000;
+}

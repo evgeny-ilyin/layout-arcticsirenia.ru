@@ -11,4 +11,5 @@ addEventListener("DOMContentLoaded", () => {
 	functions.marginAfterAbout();
 	functions.accordionPerson();
 	functions.loadmore();
+	functions.cookieAccept();
 });
